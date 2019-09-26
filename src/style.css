@@ -148,10 +148,6 @@ footer:hover .kontakt,
     right: 40px;
 }
 
-.sortering .fa-question-circle::after {
-    /* Skapa snygg övergång */
-}
-
 .sortering .fa-question-circle:hover::after,
 .sortering .fa-question-circle:focus::after {
     content: "Klicka på någon av ikonerna nedan för att filtrera listan med projekt, baserat på enskilda verktyg";

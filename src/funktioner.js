@@ -87,6 +87,7 @@ function sorteraProjekt(e) {
         const allaProjekt = document.querySelectorAll(".projekt article")
 
         for (const projekt of allaProjekt) {
+            // ändra från titel till data-verktyg
             const visa = projekt.querySelector("[title~=" + sortering + "]")
             if (visa) {
                 projekt.style.display = "block"

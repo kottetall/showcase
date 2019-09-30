@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/f8762344d3.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
-    <link rel="stylesheet" media="screen and (max-width: 500px)" href="src/styleMedia.css">
+    <link rel="stylesheet" href=" src/styleMedia.css">
     <link rel="shortcut icon" href="/img/tallkotteFavicon.png" type="image/x-icon">
     <meta name="description"
         content="Denna sida visar exempel på projekt som Kottetall genomfört och vad jag potentiellt kan bidra med för er">
@@ -57,6 +57,7 @@
                 <li><i class="fab fa-2x fa-js-square" title="JavaScript"></i></li>
                 <li><i class="fab fa-2x fa-node" title="Node"></i></li>
                 <li><i class="fab fa-2x fa-npm" title="npm"></i></li>
+                <li><i class="fab fa-2x fa-sass" title="Scss"></i></li>
                 <li class="utanProjekt"><i class="fas fa-2x fa-database" title="databas"></i></li>
                 <li class="utanProjekt"><i class="fab fa-2x fa-python" title="Python"></i></li>
                 <li><i class="fab fa-2x fa-git-alt" title="GIT"></i></li>
@@ -105,6 +106,45 @@
                                 rel="noopener">github</a>
                             <!-- <a href="https://kottetall.github.io/personligtBrev/" class="live" target="_blank"
                                 rel="noopener">live</a> -->
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </article>
+
+            <article>
+
+                <h1>Min portfolio(denna sida)</h1>
+
+                <div class="container">
+                    <div>
+                        <a href="#" class="live" target="_blank" rel="noopener">
+                            <img src="/img/missingPic300b.png" alt="Skärmklipp av min portfolio" class="screenshot"
+                                data-projekt="Portfolio">
+                        </a>
+                        <span class="workInProgress">
+                            <i class="fas fa-tools"></i>
+                            Arbete pågår med sidan
+                            <i class="fas fa-tools"></i>
+                        </span>
+                        <div class="verktyg">
+                            <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js-square" title="JavaScript"></i>
+                            <i class="fab fa-sass" title="Scss"></i>
+                            <i class="fab fa-font-awesome" title="Font-Awesome"></i>
+                            <i class="fab fa-git-alt" title="GIT"></i>
+                        </div>
+                    </div>
+                    <div class="projektText">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, odio voluptate cumque maxime
+                            similique beatae placeat ipsam magni vel dolores perferendis quasi a consequuntur iure quam!
+                            Accusamus magnam quasi adipisci.
+                        </p>
+                        <div class="projektLankar">
+                            <a href="#" class="merinfo" data-projekt="Portfolio">bakgrund</a>
+                            <a href="https://github.com/kottetall/showcase" class="github" target="_blank"
+                                rel="noopener">github</a>
                         </div>
                     </div>
                 </div>
@@ -291,11 +331,6 @@
                             <img src="img/låtLista300b.jpg" alt="Skärmklipp av låtlista" class="screenshot"
                                 data-projekt="Taikes">
                         </a>
-                        <span class="workInProgress">
-                            <i class="fas fa-tools"></i>
-                            Arbete pågår med sidan
-                            <i class="fas fa-tools"></i>
-                        </span>
                         <div class="verktyg">
                             <i class="fab fa-html5" title="HTML5"></i>
                             <i class="fab fa-css3-alt" title="CSS3"></i>
@@ -360,17 +395,13 @@
     <div class="jsMissing">
         <!-- Används för att varna när JavaScript är avstängt -->
         <div><i class="fas fa-exclamation-triangle fa-6x"></i>
-            <p>För att hantera den stora mängden information på denna
-                sida
-                används JavaScript för att sålla och sortera. <br>
+            <p>Denna sida använder JavaScript.<br>
                 <br>
-                Ser du detta meddelande, betyder det att JavaScript för närvarande är <strong>avstängt</strong> eller
-                att det <strong>inte
-                    fungerar.</strong><br>
+                Ser du detta meddelande, betyder det att JavaScript för närvarande är <strong>avstängt</strong>, att du
+                använder <strong>Internet Explorer</strong> eller
+                att <strong>något blivit fel.</strong><br>
                 <br>
-                Sidan går fortfarande att använda, dock kommer viss information inte att visas samt att den inte kommer
-                vara
-                lika interaktiv.</p>
+                Sidan går fortfarande att använda, dock kommer du inte få tillgång till all information.</p>
         </div>
     </div>
 
@@ -409,6 +440,44 @@
                         rel="noopener">github</a>
                     <!-- <a href="#" class="live" target="_blank"
                         rel="noopener">live</a> -->
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="projektBakgrund" id="projektPortfolio">
+        <i class="far fa-window-close fa-2x"></i>
+
+        <h1>Min portfolio</h1>
+
+        <div class="">
+            <div class="hallareImg">
+                <img srcset="/img/missingPic300b.png 300w, /img/missingPic600b.png 600w" src="/img/missingPic600b.png"
+                    alt="Skärmklipp av min portfolio" class="screenshotBakgrund">
+            </div>
+            <div class="projektText">
+                <ul>
+                    <li><a class="meny active" href="#behovPortfolio">behov</a></li>
+                    <li><a class="meny" href="#utmaningarPortfolio">utmaningar</a></li>
+                </ul>
+
+
+                <p id="behovPortfolio" class="meny-item" active>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat optio a aspernatur dolores veniam
+                    voluptatum perspiciatis id accusantium dolor nihil soluta blanditiis, iusto tempora amet ipsum quas
+                    eligendi temporibus esse?
+                </p>
+
+                <p id="utmaningarPortfolio" class="meny-item">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sint voluptatem est blanditiis
+                    similique quasi odit accusamus? Nihil distinctio temporibus, fugiat dolore id sint dolores
+                    accusamus, et cupiditate iste explicabo?
+                </p>
+
+                <hr>
+                <div class="projektLankar">
+                    <a href="https://github.com/kottetall/personligtBrev?files=1" class="github" target="_blank"
+                        rel="noopener">github</a>
                 </div>
             </div>
         </div>

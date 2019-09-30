@@ -1,0 +1,67 @@
+@media screen and (max-width: 550px) {
+    body {
+        background: #494949;
+    }
+
+    .sida {
+        width: 100%;
+        margin: 0;
+        border: none;
+        padding: 0;
+    }
+
+    .mainText {
+        width: 100%;
+    }
+
+    .sortering {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: #494949;
+    }
+
+    .sorteringsalternativ .utanProjekt {
+        display: none;
+    }
+
+    .projekt {
+        overflow: hidden;
+
+        & .container {
+            flex-wrap: wrap;
+        }
+
+        & .projektText {
+            max-width: 100%;
+        }
+    }
+
+    .projektBakgrund {
+        transform: translate(0);
+        top: 0;
+        left: 0;
+        padding: 0;
+        min-height: 100vh;
+        overflow: scroll;
+        z-index: 60;
+        border-radius: 0;
+
+        & h1 {
+            margin-top: 32px;
+        }
+    }
+
+    .promoBild {
+        width: 50%;
+        height: auto;
+    }
+
+    .container div {
+        width: 100%;
+    }
+
+    .screenshotBakgrund {
+        width: 95vw;
+    }
+}

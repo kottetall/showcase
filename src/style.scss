@@ -1,0 +1,468 @@
+$side-background: rgba(165, 165, 165, 0.8);
+$main-background: #494949;
+$main-text: #fff;
+$main-width: 80vw;
+
+/* TAR BORT STANDARDSAKER */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* BASIC */
+body {
+    background: linear-gradient(90deg,
+            $side-background 0%,
+            $main-background 8%,
+            $main-background 92%,
+            $side-background 100%);
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5vh;
+}
+
+article {
+    position: relative;
+}
+
+article h1 {
+    text-align: center;
+}
+
+header {
+    background: #f5f8fd;
+}
+
+header div {
+    width: $main-width;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: $main-text;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+        color: $main-text;
+    }
+}
+
+hr {
+    margin: 2vh 0 2vh 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 4px;
+}
+
+footer {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    height: 4vh;
+    left: 50vw;
+    transform: translate(-50%, 0);
+    width: 100%;
+    background: $main-background;
+    padding: 0 20px 0 20px;
+    color: $main-text;
+    border-top: rgba(0, 0, 0, 0.2) solid;
+    justify-content: center;
+
+    & span {
+        margin: 1vh 0;
+    }
+
+    &:hover span {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    &:hover .kontakt,
+    .kontakt:hover {
+        display: flex;
+    }
+}
+
+/* FONT-AWESOME */
+
+.fa-external-link-alt {
+    font-size: 50%;
+    vertical-align: top;
+}
+
+.fa-window-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* ALLMÄNNA KLASSER */
+
+.sortering {
+    position: relative;
+    display: none;
+    border-top: #555 solid;
+    border-bottom: #555 solid;
+    padding: 3vh 0;
+    text-align: center;
+    margin-bottom: 5vh;
+
+    & .fa-question-circle,
+    & .fa-undo-alt {
+        font-size: 0.7em;
+        position: absolute;
+        top: 10px;
+        border-radius: 100%;
+        background: rgba(150, 150, 150, 0.8);
+        padding: 5px;
+    }
+
+    & .fa-question-circle {
+        right: 10px;
+
+        &:hover::after,
+        &:focus::after {
+            content: "Klicka på någon av ikonerna nedan för att filtrera listan med projekt, baserat på enskilda verktyg";
+            position: absolute;
+            top: 100%;
+            right: 0px;
+            padding: 5px;
+            width: 200px;
+            background: rgba(150, 150, 150, 0.8);
+            border-radius: 20px 11px 20px 20px;
+        }
+
+    }
+
+    & .fa-undo-alt {
+        right: 40px;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            background: #bbb;
+        }
+    }
+}
+
+.sorteringsalternativ {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    min-width: 320px;
+
+    & li {
+        display: inline-block;
+        margin: 1% 3%;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            position: relative;
+            top: -4px;
+        }
+    }
+
+    & i {
+        padding: 4px;
+    }
+
+    & .utanProjekt {
+        opacity: 0.4;
+
+        &:hover,
+        &:focus {
+            cursor: default;
+            top: 0;
+        }
+    }
+}
+
+.verktyg {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+
+    & i {
+        margin: 4px 10px;
+    }
+}
+
+.active {
+    /* hitta lösning utan att använda !important */
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+.brand {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.main {
+    padding: 5vh 0;
+}
+
+.mainText {
+    width: 70%;
+    margin: 0 auto;
+
+    & h1 {
+        text-align: center;
+    }
+
+    & p {
+        padding: 10px;
+    }
+}
+
+.promoBild {
+    min-height: 250px;
+    height: 20vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.projekt {
+    clear: both;
+
+    & hr {
+        border: 1px solid #555;
+    }
+
+    & .projektText {
+        max-width: 50vw;
+
+        & p {
+            padding: 0 15px;
+            font-size: 0.9em;
+            word-wrap: break-word;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    margin-bottom: 2vh;
+}
+
+.sida .container {
+    flex-wrap: wrap;
+}
+
+.projekt .container {
+    flex-wrap: nowrap;
+}
+
+.workInProgress {
+    display: block;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 70%;
+    background: #eedf0b;
+    color: #000;
+    border-radius: 20px;
+    padding: 2px;
+    max-width: 175px;
+    text-align: center;
+    margin: 2px auto;
+}
+
+.screenshot {
+    width: 100%;
+    min-width: 300px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.projektLankar {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 0.8em;
+
+    & a {
+        margin: 5px;
+    }
+}
+
+.sida {
+    width: $main-width;
+    max-width: 1100px;
+    margin: auto;
+    background: $main-background;
+    padding: 1vw;
+    color: $main-text;
+}
+
+.jsMissing {
+    position: absolute;
+    top: 0;
+    right: 5vw;
+    background: rgba(0, 0, 0, 0.9);
+    color: $main-text;
+    padding: 10px;
+    border-radius: 10px;
+
+    & i {
+        float: left;
+        color: #ffef08;
+        margin: 10px;
+    }
+
+    & p {
+        display: none;
+        line-height: 1;
+    }
+
+    &:hover p,
+    &:focus p {
+        display: block;
+    }
+}
+
+.projektBakgrund {
+    display: none;
+    max-width: 500px;
+    min-width: 320px;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: #000;
+    color: $main-text;
+    padding: 20px;
+
+    & .projektText {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+
+        & i {
+            position: fixed;
+            right: 5px;
+            top: 5px;
+            cursor: pointer;
+        }
+    }
+
+    & ul {
+        border: #444 solid;
+        border-radius: 10px;
+        padding: 4px;
+    }
+
+    & li {
+        display: inline;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    & .projektLankar {
+        font-size: 0.9em;
+    }
+}
+
+.screenshotBakgrund {
+    object-fit: fill;
+    width: 75%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0)
+}
+
+.meny {
+    color: #999;
+}
+
+.meny-item {
+    display: none;
+    color: $main-text;
+
+    &:target {
+        display: block;
+    }
+}
+
+.merinfo {
+    display: none;
+}
+
+.kontakt {
+    background: rgba(73, 73, 73, 0.9);
+    width: auto;
+    position: fixed;
+    bottom: 4vh;
+    height: 15vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px;
+    display: none;
+    justify-content: center;
+    color: $main-text;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+
+    & i {
+        color: $main-text;
+        margin-right: 20px;
+    }
+}
+
+/* tillfällig, används vid begränsad användning */
+
+#construction {
+    display: none;
+    z-index: 60;
+    position: fixed;
+    width: 100vw;
+    top: 40vh;
+    background: #eedf0b;
+    text-align: center;
+    padding: 3vh 0 3vh 0;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3em;
+}
+
+#construction-btn {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bolder;
+    background: #ddd;
+    cursor: pointer;
+}

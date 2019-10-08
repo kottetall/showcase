@@ -17,14 +17,7 @@
 </head>
 
 <body>
-    <!-- UNDER UPPBYGGNAD, används enbart vid smakprov -->
-    <div id="construction">
-        <i class="fas fa-tools"></i>
-        pågående arbete
-        <i class="fas fa-tools"></i>
-        <button id="construction-btn">OK!</button>
-    </div>
-    <!-- UNDER UPPBYGGNAD, används enbart vid smakprov -->
+
 
 
     <header>
@@ -41,7 +34,7 @@
                 <p>
                     Välkommen! <br>
                     <br>
-                    På denna sida kommer du att kunna följa en del av de projekt som jag har genomfört/genomför. Tanken
+                    Här kommer du att kunna följa en del av de projekt som jag har genomfört/genomför. Tanken
                     är att du på ett relativt enkelt sett ska kunna se hur jag arbetar samt resultaten.
                 </p>
             </div>
@@ -57,12 +50,12 @@
                 <li><i class="fab fa-2x fa-js-square" title="JavaScript"></i></li>
                 <li><i class="fab fa-2x fa-node" title="Node"></i></li>
                 <li><i class="fab fa-2x fa-npm" title="npm"></i></li>
+                <li class="utanProjekt"><i class="fas fa-2x fa-flask" title="Jest"></i></li>
                 <li><i class="fab fa-2x fa-sass" title="Scss"></i></li>
                 <li class="utanProjekt"><i class="fas fa-2x fa-database" title="databas"></i></li>
                 <li class="utanProjekt"><i class="fab fa-2x fa-python" title="Python"></i></li>
                 <li><i class="fab fa-2x fa-git-alt" title="GIT"></i></li>
                 <li><i class="fab fa-2x fa-bootstrap" title="Bootstrap4"></i></li>
-                <li><i class="fab fa-2x fa-font-awesome" title="Font-Awesome"></i></li>
             </ul>
         </section>
 
@@ -91,14 +84,19 @@
                             <i class="fab fa-node" title="Node"></i>
                             <i class="fab fa-npm" title="npm"></i>
                             <i class="fab fa-bootstrap" title="Bootstrap4"></i>
-                            <i class="fab fa-font-awesome" title="Font-Awesome"></i>
                             <i class="fab fa-git-alt" title="GIT"></i>
                         </div>
                     </div>
                     <div class="projektText">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam odio tempore
-                            asperiores modi consectetur? Numquam sunt obcaecati, nesciunt fugiat ipsum eaque blanditiis
-                            quasi laudantium. Quam nisi est amet. Quisquam!
+                        <p>Detta är ett test/en prototyp av en idé jag fick om en sida som kunde kontrollera hur
+                            bakåtkompatibelt ens CSS var. <br>
+                            <br>
+                            Detta är knappast en ny idé, då det redan finns fletalet sidor som gör samma sak och bättre.
+                            Det är kan även, till viss del, ses som överflödigt då man exempelvis genom Sass får CSS som
+                            är kompatibelt med väldigt många olika webbläsare/versioner. <br>
+                            <br>
+                            Dock finns det en vinst i att försöka lära sig hur dessa verktyg kan vara uppbyggda
+                            samtidigt som det är tillfredställande att försöka lösa problemet själv.
                         </p>
                         <div class="projektLankar">
                             <a href="#" class="merinfo" data-projekt="CssChecker">bakgrund</a>
@@ -129,17 +127,21 @@
                         </span>
                         <div class="verktyg">
                             <i class="fab fa-html5" title="HTML5"></i>
-                            <i class="fab fa-css3-alt" title="CSS3"></i>
                             <i class="fab fa-js-square" title="JavaScript"></i>
                             <i class="fab fa-sass" title="Scss"></i>
-                            <i class="fab fa-font-awesome" title="Font-Awesome"></i>
                             <i class="fab fa-git-alt" title="GIT"></i>
                         </div>
                     </div>
                     <div class="projektText">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, odio voluptate cumque maxime
-                            similique beatae placeat ipsam magni vel dolores perferendis quasi a consequuntur iure quam!
-                            Accusamus magnam quasi adipisci.
+                        <p>Denna sida är tänkt att på ett relativt överskådligt vis visa de projekt jag arbetat/arbetar
+                            på samtidigt som det ska vara möjligt att se koden bakom. <br>
+                            <br>
+                            Denna sida är medvetet "spartansk" då jag drivs mer av problemlösningen bakom webbutveckling
+                            snarare än den ytliga designen av resultatet(även om jag givetvis inte har några problem att
+                            arbeta med den). <br>
+                            <br>
+                            Arbetet med sidan är ständigt pågående, då jag försöker hålla projekten uppdaterade såväl
+                            som att "tweaka" på koden.
                         </p>
                         <div class="projektLankar">
                             <a href="#" class="merinfo" data-projekt="Portfolio">bakgrund</a>
@@ -166,7 +168,6 @@
                             <i class="fab fa-html5" title="HTML5"></i>
                             <i class="fab fa-css3-alt" title="CSS3"></i>
                             <i class="fab fa-js-square" title="JavaScript"></i>
-                            <i class="fab fa-font-awesome" title="Font-Awesome"></i>
                             <i class="fab fa-git-alt" title="GIT"></i>
                         </div>
                     </div>
@@ -335,7 +336,6 @@
                             <i class="fab fa-html5" title="HTML5"></i>
                             <i class="fab fa-css3-alt" title="CSS3"></i>
                             <i class="fab fa-js-square" title="JavaScript"></i>
-                            <i class="fab fa-font-awesome" title="Font-Awesome"></i>
                             <i class="fab fa-git-alt" title="GIT"></i>
                         </div>
                     </div>
@@ -423,15 +423,24 @@
 
 
                 <p id="behovCssChecker" class="meny-item" active>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error deserunt corporis dolorum alias rem
-                    non officia facere beatae voluptas eveniet natus esse consectetur, numquam earum vel voluptatem quis
-                    consequuntur architecto.
+                    Målet med detta projekt är att kunna ta en eller flera CSS-filer och ladda upp dem till servern, som
+                    sedan kollar de "properties" man använt mot mozillas översikt. Sen får man en överblick av
+                    vilka av dem som kan vara i vägen för att sidan ska fungera bra med äldre webbläsare. <br>
+                    <br>
+                    Jag såg/ser äver detta som ett bra tillfälle att testa Bootstrap 4, till skilland
+                    från "vanligt" CSS och SCSS som jag normalt är van vid. Även om projektet knappast gör mig till
+                    expert på Bootstrap så ger det erfarenhet som jag kan använda i framtiden.
                 </p>
 
                 <p id="utmaningarCssChecker" class="meny-item">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque similique tempore eaque suscipit
-                    molestias quidem aliquam consequatur eligendi modi delectus ullam optio eos itaque excepturi vitae,
-                    officia deserunt? Non, omnis.
+                    Tidigt i projektet bestämde jag att grundprocessen skulle ske genom att klienten konverterade
+                    CSS-filerna till sträng som servern analyserade. Detta skedde bland
+                    annat för att försöka hålla nere antalet moduler i Node, då Express inte själv kunde hantera
+                    uppladdade filer. <br>
+                    <br>
+                    Ytterligare en utmaning var att hitta en/ett bra regex som fann de "properties" som var
+                    relevanta samtidigt som man fick ett lågt antal "false positives". Lösningen blev att dela upp
+                    processen snarare än att försöka plocka ut alla delar "i ett svep".
                 </p>
 
                 <hr>
@@ -463,15 +472,14 @@
 
 
                 <p id="behovPortfolio" class="meny-item" active>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat optio a aspernatur dolores veniam
-                    voluptatum perspiciatis id accusantium dolor nihil soluta blanditiis, iusto tempora amet ipsum quas
-                    eligendi temporibus esse?
+                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
+                    frågor/funderingar *** <br>
+
                 </p>
 
                 <p id="utmaningarPortfolio" class="meny-item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sint voluptatem est blanditiis
-                    similique quasi odit accusamus? Nihil distinctio temporibus, fugiat dolore id sint dolores
-                    accusamus, et cupiditate iste explicabo?
+                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
+                    frågor/funderingar ***
                 </p>
 
                 <hr>
@@ -574,15 +582,11 @@
                 <p id="specialBeslutsmotiveringar" class="meny-item">
                     Det som skiljer detta projekt mot många av mina andra är att det är utformat utifrån att användas av
                     en arbetsförmedlare på sin arbetsdator. Detta innebär att det finns väldigt mycket yta "över", för
-                    att tydligt visa och möjliggöra att kan minska storleken på fönstret rätt rejält så att man har
-                    plats för övriga program. <br>
+                    att möjliggöra för plats för övriga program. <br>
                     <br>
                     En speciell funktion som lades till var att när man angav ett "giltigt"(kontrollerades mot regex)
-                    diarienummer så kom en ikon fram som man kunde klicka på för att komma direkt till den aktuella
-                    akten i Diariet(arbetsförmedlingens diariesystem). Jag hade velat integrera Diariet med verktyget -
-                    att verktyget skulle hämta information från akten - dock gjorde IT-miljön att detta inte var
-                    möjligt. Ett tänkbart sätt att arbeta runt detta vore att göra om verktyget till ett tillägg i
-                    Chrome. Tyvärr har det inte funnits utrymme att testa denna idé.
+                    diarienummer så kom en klickbar ikon fram för att komma direkt till den aktuella
+                    akten i Arbetsförmedlingens diariesystem.
                 </p>
                 <hr>
                 <div class="projektLankar">
@@ -625,16 +629,13 @@
                 </p>
 
                 <p id="utmaningarStodtidKvar" class="meny-item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem perspiciatis eius facere,
-                    consequuntur dolore, nemo eveniet ducimus, temporibus quod hic magnam cum cupiditate. Quia veritatis
-                    voluptas explicabo iste porro voluptatibus quasi. Tenetur corrupti impedit incidunt perspiciatis
-                    pariatur eveniet necessitatibus aspernatur.
+                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
+                    frågor/funderingar ***
                 </p>
 
                 <p id="specialStodtidKvar" class="meny-item">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet saepe fugiat voluptatem reprehenderit
-                    aspernatur, animi odio! Temporibus optio maiores enim unde commodi! Quos ducimus, incidunt ut
-                    numquam quidem libero magnam?
+                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
+                    frågor/funderingar ***
                 </p>
                 <hr>
                 <div class="projektLankar">
@@ -666,22 +667,18 @@
 
 
                 <p id="behovTaikes" class="meny-item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, necessitatibus labore! Perspiciatis
-                    maiores illum sapiente fuga doloremque fugit beatae praesentium, incidunt cupiditate tempora magnam
-                    veritatis pariatur ab labore fugiat non!
+                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
+                    frågor/funderingar ***
                 </p>
 
                 <p id="utmaningarTaikes" class="meny-item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem perspiciatis eius facere,
-                    consequuntur dolore, nemo eveniet ducimus, temporibus quod hic magnam cum cupiditate. Quia veritatis
-                    voluptas explicabo iste porro voluptatibus quasi. Tenetur corrupti impedit incidunt perspiciatis
-                    pariatur eveniet necessitatibus aspernatur.
+                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
+                    frågor/funderingar ***
                 </p>
 
                 <p id="specialTaikes" class="meny-item">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet saepe fugiat voluptatem reprehenderit
-                    aspernatur, animi odio! Temporibus optio maiores enim unde commodi! Quos ducimus, incidunt ut
-                    numquam quidem libero magnam?
+                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
+                    frågor/funderingar ***
                 </p>
                 <hr>
                 <div class="projektLankar">
@@ -712,22 +709,18 @@
 
 
                 <p id="behovLatLista" class="meny-item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, necessitatibus labore! Perspiciatis
-                    maiores illum sapiente fuga doloremque fugit beatae praesentium, incidunt cupiditate tempora magnam
-                    veritatis pariatur ab labore fugiat non!
+                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
+                    frågor/funderingar ***
                 </p>
 
                 <p id="utmaningarLatLista" class="meny-item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem perspiciatis eius facere,
-                    consequuntur dolore, nemo eveniet ducimus, temporibus quod hic magnam cum cupiditate. Quia veritatis
-                    voluptas explicabo iste porro voluptatibus quasi. Tenetur corrupti impedit incidunt perspiciatis
-                    pariatur eveniet necessitatibus aspernatur.
+                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
+                    frågor/funderingar ***
                 </p>
 
                 <p id="specialLatLista" class="meny-item">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet saepe fugiat voluptatem reprehenderit
-                    aspernatur, animi odio! Temporibus optio maiores enim unde commodi! Quos ducimus, incidunt ut
-                    numquam quidem libero magnam?
+                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
+                    frågor/funderingar ***
                 </p>
                 <hr>
                 <div class="projektLankar">

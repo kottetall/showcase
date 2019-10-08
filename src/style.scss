@@ -435,34 +435,3 @@ footer {
         margin-right: 20px;
     }
 }
-
-/* tillfällig, används vid begränsad användning */
-
-#construction {
-    display: none;
-    z-index: 60;
-    position: fixed;
-    width: 100vw;
-    top: 40vh;
-    background: #eedf0b;
-    text-align: center;
-    padding: 3vh 0 3vh 0;
-    color: #000;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 3em;
-}
-
-#construction-btn {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 100px;
-    height: 50px;
-    border-radius: 20px;
-    border: none;
-    font-weight: bolder;
-    background: #ddd;
-    cursor: pointer;
-}

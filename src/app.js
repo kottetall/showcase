@@ -15,16 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".sorteringsalternativ").addEventListener("click", sorteraProjekt)
 
     // kollar om sidan visas i testmiljön och tar bort banner samt visar platshållarbilder
-    devEnv()
-
-    //tar fram knappen för konstruktionsgrejen så att bannern kan tas bort
-    let constructionBtn = document.getElementById("construction-btn");
-    constructionBtn.style.display = "block";
-    constructionBtn.addEventListener("click", (e) => {
-        document.getElementById("construction").style.display = "none";
-    }, {
-        once: true
-    });
+    // devEnv()
 
 
     // För att kunna "återställa" projektlista

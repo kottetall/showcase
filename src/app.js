@@ -25,8 +25,6 @@ window.addEventListener("DOMContentLoaded", () => {
         for (const projekt of allaProjekt) {
             projekt.style.display = "block"
         }
-
-
     }, {
         passive: "true"
     })

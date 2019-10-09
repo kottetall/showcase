@@ -57,9 +57,11 @@ function oppnaModal(e) {
     //lägger till eventlistener för klick på kryssrutan
     let kryssruta = document.querySelector(id + " i");
     kryssruta.addEventListener("click", (e) => {
-        // TODO! slå ihop detta event med multi!
+        // TODO: slå ihop detta event med multi!
         dolj(modal);
     });
+
+    //TODO: Lägga till så att backbutton på mobil kan stänga modal
 
     //eventlist. för modal - tangenter och tryck utanför. Separat funktion
     multiEventListener(modal, dolj);

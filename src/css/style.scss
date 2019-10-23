@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Merriweather', serif;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+header {
+    position: sticky;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+section {
+    margin-bottom: 5vh;
+}
+
+.icon {
+    height: 30px;
+    margin: 5px;
+}
+
+// HEADER
+
+.logga-namn {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.meny {
+    text-align: right;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        font-size: 1.1rem;
+    }
+
+    &:hover+.menylista,
+    &:focus+.menylista {
+        display: block;
+    }
+}
+
+.menylista {
+    list-style: none;
+    display: none;
+    position: absolute;
+}
+
+
+// INTRODEL
+
+.intro {
+    position: relative;
+    width: 100vw;
+}
+
+.introbild {
+    width: 100%;
+    object-fit: contain;
+}
+
+.shadow {
+    position: absolute;
+    display: flex;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+    align-items: center;
+
+    .introtext a {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+// FILTER DEL
+.filter {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+.verktyg {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .verktyg-icon {
+        height: 30px;
+        margin: 5px 10px;
+
+        &:hover,
+        &:focus {
+            position: relative;
+            cursor: pointer;
+            top: -5px;
+            left: -5px;
+        }
+    }
+}
+
+// PROJEKT
+
+.projekttyp-rubrik {
+    margin: 10px;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        background: yellowgreen; //TODO: ändra till riktig färg
+        text-decoration: underline;
+    }
+
+    &::after {
+        position: absolute;
+        left: 80%;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    &[aria-expanded="true"]::after {
+        content: "˄";
+    }
+
+    &[aria-expanded="false"]::after {
+        content: "˅";
+    }
+
+    &[aria-expanded="true"]+.projekt {
+        display: block;
+    }
+
+    &[aria-expanded="false"]+.projekt {
+        display: none;
+    }
+}
+
+.projekt {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 90vw;
+    margin: 0 auto;
+
+    &::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background: linear-gradient(90deg, #fff, #000, #fff);
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.projekt-bild-container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.projekt-bild {
+    object-fit: contain;
+    width: 100%;
+}
+
+.projekt-verktyg {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 1vh 0;
+}
+
+.projekt-icon {
+    height: 20px;
+    margin: 5px;
+}
+
+.projekt-text {
+    margin: 0 auto;
+}
+
+.projekt-lankar {
+    margin: 1vh 0;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    & li a {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}

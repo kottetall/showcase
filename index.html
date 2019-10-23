@@ -5,821 +5,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/f8762344d3.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css">
-    <link rel="stylesheet" href=" src/styleMedia.css">
-    <link rel="shortcut icon" href="/img/tallkotteFavicon.png" type="image/x-icon">
-    <meta name="description"
-        content="Denna sida visar exempel på projekt som Kottetall genomfört och vad jag potentiellt kan bidra med för er">
-    <meta name="keywords" content="Mariestad, Skaraborg, HTML, JavaScript, CSS, hemsida, webbsida">
-    <title>Alex portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <title>Document</title>
 </head>
 
 <body>
 
-
-
     <header>
-        <div>
-            <!-- Ändra loggan! -->
-            <img src="img/tallkotte60b.png" alt="logga">
-            <span class="brand">kottetall</span>
+        <div class="logga">
+            <img src="/img/tallkotte60b.png" alt="">
+            <span class="logga-namn">kottetall</span>
         </div>
+        <nav>
+            <span class="meny">---</span>
+            <ul class="menylista">
+                <li class="menyitems"><a href="#pagaende" rel="noopener noreferrer">pågående</a></li>
+                <li class="menyitems"><a href="#tidigare" rel="noopener noreferrer">tidigare</a></li>
+                <li class="menyitems"><a href="#planerade" rel="noopener noreferrer">planerade</a></li>
+                <li class="menyitems"><a href="#kontakt" rel="noopener noreferrer">kontakt</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="sida">
-        <section class="main container">
-            <div class="mainText">
-                <p>
-                    Välkommen! <br>
+    <section>
+        <div class="intro">
+            <img src="/tmp/clouds-cloudy-cold-167699.jpg" alt="snowy montains" class="introbild">
+            <!-- //TODO: lägg till bilder i olika storlekar - srcset -->
+            <div class="shadow">
+                <p class="introtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae natus
+                    reprehenderit porro necessitatibus praesentium accusamus. <br>
                     <br>
-                    Här kommer du att kunna följa en del av de projekt som jag har genomfört/genomför. Tanken
-                    är att du på ett enkelt sett ska kunna se hur jag arbetar samt resultatet av det.
+                    <a href="#kontakt">Hör gärna av er!</a>
                 </p>
+
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="sortering">
-            <i class="far fa-question-circle"></i>
-            <i class="fas fa-undo-alt" title="Återställ lista"></i>
-            <h2>Filtrera projekt</h2>
-            <ul class="sorteringsalternativ">
-                <li><i class="fab fa-2x fa-html5" title="HTML5"></i></li>
-                <li><i class="fab fa-2x fa-css3-alt" title="CSS3"></i></li>
-                <li><i class="fab fa-2x fa-js-square" title="JavaScript"></i></li>
-                <li><i class="fab fa-2x fa-node" title="Node"></i></li>
-                <li><i class="fab fa-2x fa-npm" title="npm"></i></li>
-                <li><i class="fas fa-2x fa-flask" title="Jest"></i></li>
-                <li><i class="fab fa-2x fa-sass" title="Scss"></i></li>
-                <li><i class="fas fa-2x fa-database" title="databas"></i></li>
-                <li class="utanProjekt"><i class="fab fa-2x fa-python" title="Python"></i></li>
-                <li><i class="fab fa-2x fa-git-alt" title="GIT"></i></li>
-                <li><i class="fab fa-2x fa-bootstrap" title="Bootstrap4"></i></li>
-            </ul>
-        </section>
+    <section class="filter">
+        <h2>filter</h2>
+        <p class="filtertext">hämta projekt som använder specifika verktyg</p>
+        <div class="verktyg">
+            <img src="/img/ikoner/nodejs.svg" alt="NodeJs" class="verktyg-icon">
+            <img src="/img/ikoner/npm.svg" alt="npm" class="verktyg-icon">
+            <img src="/img/ikoner/nodemon.svg" alt="Nodemon" class="verktyg-icon">
+            <img src="/img/ikoner/sass.svg" alt="Sass" class="verktyg-icon">
+            <img src="/img/ikoner/git.svg" alt="Git" class="verktyg-icon">
+            <img src="/img/ikoner/javascript.svg" alt="JavaScript" class="verktyg-icon">
+            <img src="/img/ikoner/jest.svg" alt="jest" class="verktyg-icon">
+            <img src="/img/ikoner/python.svg" alt="python" class="verktyg-icon">
+            <img src="/img/ikoner/excel.svg" alt="excel" class="verktyg-icon">
+            <img src="/img/ikoner/word.svg" alt="word" class="verktyg-icon">
+        </div>
+    </section>
 
-        <!-- PROJEKTVISNING -->
-        <section class="projekt">
-            <article>
-
-                <h1>Personligt brev - Version 2</h1>
-
-                <div class="container">
-                    <div>
-                        <a href="https://github.com/kottetall/personligt-brev-node" class="live" target="_blank"
-                            rel="noopener">
-                            <img src="/img/personligtBrevNode600b.jpg"
-                                alt="Skärmklipp av personligt brev generator version 2" class="screenshot"
-                                data-projekt="PersonligtBrevNode">
-                        </a>
-                        <span class="workInProgress">
-                            <i class="fas fa-tools"></i>
-                            Arbete pågår med sidan
-                            <i class="fas fa-tools"></i>
-                        </span>
-                        <div class="verktyg">
-                            <i class="fab fa-html5" title="HTML5"></i>
-                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                            <i class="fab fa-js-square" title="JavaScript"></i>
-                            <i class="fab fa-node" title="Node"></i>
-                            <i class="fab fa-npm" title="npm"></i>
-                            <i class="fas fa-flask" title="Jest"></i>
-                            <i class="fab fa-sass" title="Scss"></i>
-                            <i class="fas fa-database" title="databas"></i>
-                            <i class="fab fa-git-alt" title="GIT"></i>
-                        </div>
-                    </div>
-                    <div class="projektText">
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id laboriosam voluptate ipsam
-                            temporibus eum, aliquid iste autem exercitationem rem corporis neque iusto ut optio quisquam
-                            sapiente vitae. Sapiente, aspernatur. Beatae?
-                        </p>
-                        <div class="projektLankar">
-                            <a href="#" class="merinfo" data-projekt="PersonligtBrevNode">bakgrund</a>
-                            <a href="https://github.com/kottetall/personligt-brev-node?files=1" class="github"
-                                target="_blank" rel="noopener">github</a>
-                            <!-- <a href="#" class="live" target="_blank"
-                                rel="noopener">live</a> -->
-                        </div>
-                    </div>
+    <section class="oversiktprojekt">
+        <div id="pagaende" class="projekttyp">
+            <h3 class="projekttyp-rubrik" aria-expanded="true">Pågående</h3>
+            <article class="projekt">
+                <h4>Beslutsmotiveringar</h4>
+                <div class="projekt-bild-container">
+                    <img src="/img/beslutsmotiveringarFullSize.jpg" alt="Beslutsmotiveringar" class="projekt-bild">
                 </div>
-                <hr>
+                <div class="projekt-verktyg">
+                    <img src="/img/ikoner/jest.svg" alt="jest" class="projekt-icon">
+                    <img src="/img/ikoner/python.svg" alt="python" class="projekt-icon">
+                    <img src="/img/ikoner/excel.svg" alt="excel" class="projekt-icon">
+                    <img src="/img/ikoner/word.svg" alt="word" class="projekt-icon">
+                    <img src="/img/ikoner/jest.svg" alt="jest" class="projekt-icon">
+                    <img src="/img/ikoner/python.svg" alt="python" class="projekt-icon">
+                    <img src="/img/ikoner/excel.svg" alt="excel" class="projekt-icon">
+                    <img src="/img/ikoner/word.svg" alt="word" class="projekt-icon">
+                    <img src="/img/ikoner/jest.svg" alt="jest" class="projekt-icon">
+                    <img src="/img/ikoner/python.svg" alt="python" class="projekt-icon">
+                    <img src="/img/ikoner/excel.svg" alt="excel" class="projekt-icon">
+                    <img src="/img/ikoner/word.svg" alt="word" class="projekt-icon">
+                    <img src="/img/ikoner/jest.svg" alt="jest" class="projekt-icon">
+                    <img src="/img/ikoner/python.svg" alt="python" class="projekt-icon">
+                    <img src="/img/ikoner/excel.svg" alt="excel" class="projekt-icon">
+                    <img src="/img/ikoner/word.svg" alt="word" class="projekt-icon">
+                    <img src="/img/ikoner/jest.svg" alt="jest" class="projekt-icon">
+                    <img src="/img/ikoner/python.svg" alt="python" class="projekt-icon">
+                    <img src="/img/ikoner/excel.svg" alt="excel" class="projekt-icon">
+                    <img src="/img/ikoner/word.svg" alt="word" class="projekt-icon">
+                </div>
+
+                <p class="projekt-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim ipsam voluptatem,
+                    earum velit voluptatibus facere autem delectus ipsa optio itaque nulla a quisquam sapiente iste
+                    distinctio alias rerum molestias molestiae!</p>
+
+                <ul class="projekt-lankar">
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">github</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">live</a></li>
+                </ul>
             </article>
-
-            <article>
-
-                <h1>Css checker</h1>
-
-                <div class="container">
-                    <div>
-                        <a href="https://github.com/kottetall/cssChecker" class="live" target="_blank" rel="noopener">
-                            <img src="/img/cssChecker600b.jpg" alt="Skärmklipp av Css checker" class="screenshot"
-                                data-projekt="CssChecker">
-                        </a>
-                        <span class="workInProgress">
-                            <i class="fas fa-tools"></i>
-                            Arbete pågår med sidan
-                            <i class="fas fa-tools"></i>
-                        </span>
-                        <div class="verktyg">
-                            <i class="fab fa-html5" title="HTML5"></i>
-                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                            <i class="fab fa-js-square" title="JavaScript"></i>
-                            <i class="fab fa-node" title="Node"></i>
-                            <i class="fab fa-npm" title="npm"></i>
-                            <i class="fab fa-bootstrap" title="Bootstrap4"></i>
-                            <i class="fab fa-git-alt" title="GIT"></i>
-                        </div>
-                    </div>
-                    <div class="projektText">
-                        <p>Detta är ett test/en prototyp av en idé jag fick om en sida som kunde kontrollera hur
-                            bakåtkompatibelt ens CSS var. <br>
-                            <br>
-                            Detta är knappast en ny idé, då det redan finns fletalet sidor som gör samma sak, och
-                            bättre.
-                            Det kan även, till viss del, ses som överflödigt då man exempelvis genom Sass får CSS som
-                            är kompatibelt med väldigt många olika webbläsare/versioner. <br>
-                            <br>
-                            Dock finns det en vinst i att försöka lära sig hur dessa verktyg kan vara uppbyggda
-                            samtidigt som det är tillfredställande att försöka lösa problemet själv.
-                        </p>
-                        <div class="projektLankar">
-                            <a href="#" class="merinfo" data-projekt="CssChecker">bakgrund</a>
-                            <a href="https://github.com/kottetall/cssChecker" class="github" target="_blank"
-                                rel="noopener">github</a>
-                            <!-- <a href="https://kottetall.github.io/personligtBrev/" class="live" target="_blank"
-                                rel="noopener">live</a> -->
-                        </div>
-                    </div>
+        </div>
+        <div id="tidigare" class="projekttyp">
+            <h3 class="projekttyp-rubrik" aria-expanded="false">Tidigare</h3>
+            <article class="projekt">
+                <h4>Beslutsmotiveringar</h4>
+                <div class="projekt-bild-container">
+                    <img src="/img/beslutsmotiveringarFullSize.jpg" alt="Beslutsmotiveringar" class="projekt-bild">
                 </div>
-                <hr>
+                <div class="projekt-verktyg">
+                    <img src="/img/ikoner/jest.svg" alt="jest" class="projekt-icon">
+                    <img src="/img/ikoner/python.svg" alt="python" class="projekt-icon">
+                    <img src="/img/ikoner/excel.svg" alt="excel" class="projekt-icon">
+                    <img src="/img/ikoner/word.svg" alt="word" class="projekt-icon">
+                    <img src="/img/ikoner/jest.svg" alt="jest" class="projekt-icon">
+                    <img src="/img/ikoner/python.svg" alt="python" class="projekt-icon">
+                    <img src="/img/ikoner/excel.svg" alt="excel" class="projekt-icon">
+                    <img src="/img/ikoner/word.svg" alt="word" class="projekt-icon">
+                    <img src="/img/ikoner/jest.svg" alt="jest" class="projekt-icon">
+                    <img src="/img/ikoner/python.svg" alt="python" class="projekt-icon">
+                    <img src="/img/ikoner/excel.svg" alt="excel" class="projekt-icon">
+                    <img src="/img/ikoner/word.svg" alt="word" class="projekt-icon">
+                    <img src="/img/ikoner/jest.svg" alt="jest" class="projekt-icon">
+                    <img src="/img/ikoner/python.svg" alt="python" class="projekt-icon">
+                    <img src="/img/ikoner/excel.svg" alt="excel" class="projekt-icon">
+                    <img src="/img/ikoner/word.svg" alt="word" class="projekt-icon">
+                    <img src="/img/ikoner/jest.svg" alt="jest" class="projekt-icon">
+                    <img src="/img/ikoner/python.svg" alt="python" class="projekt-icon">
+                    <img src="/img/ikoner/excel.svg" alt="excel" class="projekt-icon">
+                    <img src="/img/ikoner/word.svg" alt="word" class="projekt-icon">
+                </div>
+
+                <p class="projekt-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim ipsam voluptatem,
+                    earum velit voluptatibus facere autem delectus ipsa optio itaque nulla a quisquam sapiente iste
+                    distinctio alias rerum molestias molestiae!</p>
+
+                <ul class="projekt-lankar">
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">github</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">live</a></li>
+                </ul>
             </article>
-
-            <article>
-
-                <h1>Min portfolio(denna sida)</h1>
-
-                <div class="container">
-                    <div>
-                        <a href="#" class="live" target="_blank" rel="noopener">
-                            <img src="/img/portfolio600b.jpg" alt="Skärmklipp av min portfolio" class="screenshot"
-                                data-projekt="Portfolio">
-                        </a>
-                        <span class="workInProgress">
-                            <i class="fas fa-tools"></i>
-                            Arbete pågår med sidan
-                            <i class="fas fa-tools"></i>
-                        </span>
-                        <div class="verktyg">
-                            <i class="fab fa-html5" title="HTML5"></i>
-                            <i class="fab fa-js-square" title="JavaScript"></i>
-                            <i class="fab fa-sass" title="Scss"></i>
-                            <i class="fab fa-git-alt" title="GIT"></i>
-                        </div>
-                    </div>
-                    <div class="projektText">
-                        <p>Denna sida är tänkt att på ett relativt överskådligt vis visa de projekt jag arbetat/arbetar
-                            på samtidigt som det ska vara möjligt att se koden bakom. <br>
-                            <br>
-                            Denna sida är medvetet "spartansk" då jag drivs mer av problemlösningen bakom webbutveckling
-                            snarare än den ytliga designen av resultatet(även om jag givetvis inte har några problem att
-                            arbeta med den). <br>
-                            <br>
-                            Arbetet med sidan är ständigt pågående, då jag försöker hålla projekten uppdaterade såväl
-                            som att "tweaka" på koden.
-                        </p>
-                        <div class="projektLankar">
-                            <a href="#" class="merinfo" data-projekt="Portfolio">bakgrund</a>
-                            <a href="https://github.com/kottetall/showcase" class="github" target="_blank"
-                                rel="noopener">github</a>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </article>
-
-            <article>
-
-                <h1>Personligt brev - Generator</h1>
-
-                <div class="container">
-                    <div>
-                        <a href="https://kottetall.github.io/personligtBrev/" class="live" target="_blank"
-                            rel="noopener">
-                            <img src="/img/personligtBrev600b.jpg" alt="Skärmklipp av personligt brev generator"
-                                class="screenshot" data-projekt="PersonligtBrev">
-                        </a>
-                        <div class="verktyg">
-                            <i class="fab fa-html5" title="HTML5"></i>
-                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                            <i class="fab fa-js-square" title="JavaScript"></i>
-                            <i class="fab fa-git-alt" title="GIT"></i>
-                        </div>
-                    </div>
-                    <div class="projektText">
-                        <p>När man ska söka ett jobb kan det vara svårt att skriva ett personligt brev, och det främsta
-                            hindret
-                            brukar vara starten. <br>
-                            <br>
-                            Syftet med detta "proof of concept" är att skapa en kärna till det personliga brevet,
-                            baserat på annonstexten. <br>
-                            <br>
-                            <strong>För närvarande arbetar jag med version 2.0</strong> som använder sig av Node, med
-                            "nedb" och "Express",
-                            där målet bland annat är att användare ska kunna skapa konton och spara sina egna
-                            motiveringar i en
-                            databas, istället för i en JSON-fil som i detta exempel.
-                        </p>
-                        <div class="projektLankar">
-                            <a href="#" class="merinfo" data-projekt="PersonligtBrev">bakgrund</a>
-                            <a href="https://github.com/kottetall/personligtBrev?files=1" class="github" target="_blank"
-                                rel="noopener">github</a>
-                            <a href="https://kottetall.github.io/personligtBrev/" class="live" target="_blank"
-                                rel="noopener">live</a>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </article>
-
-            <article>
-
-                <h1>Beslutsmotiveringsmallar (arbetsförmedlingen)</h1>
-
-                <div class="container">
-                    <div>
-                        <a href="https://kottetall.github.io/beslutsmallar/" class="live" target="_blank"
-                            rel="noopener">
-                            <img src="/img/beslutsmotiveringar600b.jpg" alt="Skärmklipp av Beslutsmotiveringar"
-                                class="screenshot" data-projekt="Beslutsmotiveringar">
-                        </a>
-                        <div class="verktyg">
-                            <i class="fab fa-html5" title="HTML5"></i>
-                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                            <i class="fab fa-js-square" title="JavaScript"></i>
-                        </div>
-                    </div>
-                    <div class="projektText">
-                        <p>När man tar beslut på en myndighet ska grunderna för detta motiveras (32 §
-                            Förvaltningslagen[2017:900]). <br>
-                            <br>
-
-                            Detta verktyg effektiviserar och kvalitétssäkrar motiveringen genom att man får fylla i de
-                            uppgifter som är relevanta i
-                            ärendet på en plats och sedan genereras en motivering utifrån detta.
-
-                        </p>
-                        <div class="projektLankar">
-                            <a href="#" class="merinfo" data-projekt="Beslutsmotiveringar">bakgrund</a>
-                            <a href="https://github.com/kottetall/beslutsmallar?files=1" class="github" target="_blank"
-                                rel="noopener">github</a>
-                            <a href="https://kottetall.github.io/beslutsmallar/" class="live" target="_blank"
-                                rel="noopener">live</a>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </article>
-
-            <article>
-
-                <h1>Kvarvarande stödtid vid nystartsjobb(arbetsförmedlingen)</h1>
-
-                <div class="container">
-                    <div>
-                        <a href="https://kottetall.github.io/gammalSt-dtid/" class="live" target="_blank"
-                            rel="noopener">
-                            <img src="/img/stodtidkvar600b.jpg" alt="Skärmklipp av kvarvarande stödtid"
-                                class="screenshot" data-projekt="StodtidKvar">
-                        </a>
-                        <div class="verktyg">
-                            <i class="fab fa-html5" title="HTML5"></i>
-                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                            <i class="fab fa-js-square" title="JavaScript"></i>
-                        </div>
-                    </div>
-                    <div class="projektText">
-                        <p>Vid anställningar med stöd i form av Nystartsjobb går det att använda stödtid som tidigare
-                            räknats ut för den sökande, men som inte använts(18 § förordning[2018:43] om stöd för
-                            nystartsjobb). <br>
-                            <br>
-
-                            Detta verktyg förenklar processen genom att man bara behöver skriva in de datum som är
-                            relevanta och sedan trycka på "räkna ut". Verktyget ger sedan den nya perioden tillsammans
-                            med en översikt av uträkningen, vilket möjliggör en transparent granskning.
-                        </p>
-                        <div class="projektLankar">
-                            <a href="#" class="merinfo" data-projekt="StodtidKvar">bakgrund</a>
-                            <a href="https://github.com/kottetall/gammalSt-dtid?files=1" class="github" target="_blank"
-                                rel="noopener">github</a>
-                            <a href="https://kottetall.github.io/gammalSt-dtid/" class="live" target="_blank"
-                                rel="noopener">live</a>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </article>
-
-            <article>
-
-                <h1>Taikes
-
-                </h1>
-
-                <div class="container">
-                    <div>
-                        <a href="https://kottetall.github.io/taikes/" class="live" target="_blank" rel="noopener">
-                            <img src="img/taikes600b.jpg" alt="Skärmklipp av Taikes" class="screenshot"
-                                data-projekt="Taikes">
-                        </a>
-                        <span class="workInProgress">
-                            <i class="fas fa-tools"></i>
-                            Arbete pågår med sidan
-                            <i class="fas fa-tools"></i>
-                        </span>
-                        <div class="verktyg">
-                            <i class="fab fa-html5" title="HTML5"></i>
-                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                            <i class="fab fa-js-square" title="JavaScript"></i>
-                            <i class="fab fa-git-alt" title="GIT"></i>
-                        </div>
-
-                    </div>
-                    <div class="projektText">
-                        <p>Detta är en omarbetad version av Taikes ursprungliga hemsida<br>
-                            <br>
-                            Grundidén som hemsidan skapats utifrån är tanken kring slumpade text-citat från låtar. Den
-                            nya sidan har byggts upp runt denna idé genom HTML, CSS och JavaScript, utan externa
-                            bibliotek.
-
-
-                        </p>
-                        <div class="projektLankar">
-                            <a href="#" class="merinfo" data-projekt="Taikes">bakgrund</a>
-                            <a href="https://www.taikes.com" target="_blank" rel="noopener">original</a>
-                            <a href="https://github.com/kottetall/taikes?files=1" class="github" target="_blank"
-                                rel="noopener">github</a>
-                            <a href="https://kottetall.github.io/taikes/" class="live" target="_blank"
-                                rel="noopener">live</a>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </article>
-
-            <article>
-
-                <h1>Låtlista</h1>
-
-                <div class="container">
-                    <div>
-                        <a href="https://kottetall.github.io/l-tLista/" class="live" target="_blank" rel="noopener">
-                            <img src="img/låtLista600b.jpg" alt="Skärmklipp av låtlista" class="screenshot"
-                                data-projekt="Taikes">
-                        </a>
-                        <div class="verktyg">
-                            <i class="fab fa-html5" title="HTML5"></i>
-                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                            <i class="fab fa-js-square" title="JavaScript"></i>
-                            <i class="fab fa-git-alt" title="GIT"></i>
-                        </div>
-                    </div>
-                    <div class="projektText">
-                        <p>Detta projekt skapades som en lösning på ett problem jag hade: Jag hade en gammal
-                            låtlista/-översikt över låtar som fanns på min dator 2005. Jag ville på ett (relativt)
-                            snabbt sätt kunna gå igenom listan och se vilka låtar som fanns samt kunna kopiera artist
-                            och låtnamn smidigt för kolla om de fanns
-                            på Spotify. <br>
-                            <br>
-                            Resultatet är en lista där man kan ta bort en listpost(ej bestående) och/eller kopiera
-                            artist- och låtnamn till urklipp.
-                        </p>
-                        <div class="projektLankar">
-                            <a href="#" class="merinfo" data-projekt="LatLista">bakgrund</a>
-                            <a href="https://github.com/kottetall/l-tLista?files=1" class="github" target="_blank"
-                                rel="noopener">github</a>
-                            <a href="https://kottetall.github.io/l-tLista/" class="live" target="_blank"
-                                rel="noopener">live</a>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </article>
-
-        </section>
-
-
-    </div>
-
-    <!-- FOT -->
-
-    <footer>
-        <span>&COPY; Kottetall / Alexander Hedling</span>
-
-        <!-- måste ligga i anslutning till footer för att css hover ska funka som tänkt -->
-        <div class="kontakt">
-            <!-- lägg till tabbmöjlighet -->
-            <i class="far fa-id-badge fa-4x"></i>
-            <div>
-                <ul>
-                    <li>Mail: <a href="mailto:kottetall@hotmail.com">kottetall@hotmail.com</a></li>
-                    <li>Telefon: <a href="tel:0701756988">0701-756988</a></li>
-                </ul>
-            </div>
         </div>
-    </footer>
-
-
-
-
-
-    <!-- MODULER -->
-
-    <!-- finns även en modul - "kontakt" - i footer -->
-
-    <div class="jsMissing">
-        <!-- Används för att varna när JavaScript är avstängt -->
-        <div><i class="fas fa-exclamation-triangle fa-6x"></i>
-            <p>Denna sida använder JavaScript.<br>
-                <br>
-                Ser du detta meddelande, betyder det att JavaScript för närvarande är <strong>avstängt</strong>, att du
-                använder <strong>Internet Explorer</strong> eller
-                att <strong>något blivit fel.</strong><br>
-                <br>
-                Sidan går fortfarande att använda, dock kommer du inte få tillgång till all information.</p>
+        <div id="planerade" class="projekttyp">
+            <h3 class="projekttyp-rubrik" aria-expanded="false">Planerade</h3>
+            <article class="projekt"></article>
         </div>
-    </div>
-
-    <article class="projektBakgrund" id="projektPersonligtBrevNode">
-        <i class="far fa-window-close fa-2x"></i>
-
-        <h1>Personligt brev - Version 2</h1>
-
-        <div class="">
-            <div class="hallareImg">
-                <img srcset="/img/personligtBrevNode300b.jpg 300w, /img/personligtBrevNode600b.jpg 600w"
-                    src="/img/personligtBrevNode600b.jpg" alt="Skärmklipp av personligt brev version 2"
-                    class="screenshotBakgrund">
-            </div>
-            <div class="projektText">
-                <ul>
-                    <li><a class="meny active" href="#behovPersonligtBrevNode">behov</a></li>
-                    <li><a class="meny" href="#utmaningarPersonligtBrevNode">utmaningar</a></li>
-                </ul>
+    </section>
 
 
-                <p id="behovPersonligtBrevNode" class="meny-item" active>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sunt dolores voluptatum non eos
-                    aspernatur, harum vero libero culpa, dolor nam quis facere esse, vitae earum nemo dolorum labore
-                    atque.
-                </p>
-
-                <p id="utmaningarPersonligtBrevNode" class="meny-item">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illo iure ratione itaque, atque
-                    est aliquam! At dignissimos, placeat nihil quam consequuntur iusto ab reiciendis. Maiores quis alias
-                    eligendi sit!
-                </p>
-
-                <hr>
-                <div class="projektLankar">
-                    <a href="https://github.com/kottetall/personligt-brev-node?files=1" class="github" target="_blank"
-                        rel="noopener">github</a>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article class="projektBakgrund" id="projektCssChecker">
-        <i class="far fa-window-close fa-2x"></i>
-
-        <h1>CSS checker</h1>
-
-        <div class="">
-            <div class="hallareImg">
-                <img srcset="/img/cssChecker300b.jpg 300w, /img/cssChecker600b.jpg 600w" src="/img/cssChecker600b.jpg"
-                    alt="Skärmklipp av CSS checker" class="screenshotBakgrund">
-            </div>
-            <div class="projektText">
-                <ul>
-                    <li><a class="meny active" href="#behovCssChecker">behov</a></li>
-                    <li><a class="meny" href="#utmaningarCssChecker">utmaningar</a></li>
-                </ul>
 
 
-                <p id="behovCssChecker" class="meny-item" active>
-                    Målet med detta projekt är att kunna ta en eller flera CSS-filer och ladda upp dem till servern, som
-                    sedan kollar de "properties" man använt mot mozillas översikt. Sen får man en överblick av
-                    vilka av dem som kan vara i vägen för att sidan ska fungera bra med äldre webbläsare. <br>
-                    <br>
-                    Jag såg/ser äver detta som ett bra tillfälle att testa Bootstrap 4, till skilland
-                    från "vanligt" CSS och SCSS som jag normalt är van vid. Även om projektet knappast gör mig till
-                    expert på Bootstrap så ger det erfarenhet som jag kan använda i framtiden.
-                </p>
-
-                <p id="utmaningarCssChecker" class="meny-item">
-                    Tidigt i projektet bestämde jag att grundprocessen skulle ske genom att klienten konverterade
-                    CSS-filerna till en sträng som servern analyserade. Detta skedde bland
-                    annat för att försöka hålla nere antalet moduler i Node, då Express inte själv kunde hantera
-                    uppladdade filer. <br>
-                    <br>
-                    Ytterligare en utmaning var att hitta en/ett bra regex som fann de "properties" som var
-                    relevanta samtidigt som man fick ett lågt antal "false positives". Lösningen blev att dela upp
-                    processen snarare än att försöka plocka ut alla delar "i ett svep".
-                </p>
-
-                <hr>
-                <div class="projektLankar">
-                    <a href="https://github.com/kottetall/cssChecker" class="github" target="_blank"
-                        rel="noopener">github</a>
-                    <!-- <a href="#" class="live" target="_blank"
-                        rel="noopener">live</a> -->
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article class="projektBakgrund" id="projektPortfolio">
-        <i class="far fa-window-close fa-2x"></i>
-
-        <h1>Min portfolio</h1>
-
-        <div class="">
-            <div class="hallareImg">
-                <img srcset="/img/portfolio300b.jpg 300w, /img/portfolio600b.jpg 600w" src="/img/portfolio300b.jpg"
-                    alt="Skärmklipp av min portfolio" class="screenshotBakgrund">
-            </div>
-            <div class="projektText">
-                <ul>
-                    <li><a class="meny active" href="#behovPortfolio">behov</a></li>
-                    <li><a class="meny" href="#utmaningarPortfolio">utmaningar</a></li>
-                </ul>
-
-
-                <p id="behovPortfolio" class="meny-item" active>
-                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
-                    frågor/funderingar *** <br>
-
-                </p>
-
-                <p id="utmaningarPortfolio" class="meny-item">
-                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
-                    frågor/funderingar ***
-                </p>
-
-                <hr>
-                <div class="projektLankar">
-                    <a href="https://github.com/kottetall/personligtBrev?files=1" class="github" target="_blank"
-                        rel="noopener">github</a>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article class="projektBakgrund" id="projektPersonligtBrev">
-        <i class="far fa-window-close fa-2x"></i>
-
-        <h1>Personligt brev - Generator</h1>
-
-        <div class="">
-            <div class="hallareImg">
-                <img srcset="/img/personligtBrev300b.jpg 300w, /img/personligtBrev600b.jpg 600w"
-                    src="/img/personligtBrev600b.jpg" alt="Skärmklipp av personligt brev" class="screenshotBakgrund">
-            </div>
-            <div class="projektText">
-                <ul>
-                    <li><a class="meny active" href="#behovPersonligtBrev">behov</a></li>
-                    <li><a class="meny" href="#utmaningarPersonligtBrev">utmaningar</a></li>
-                </ul>
-
-
-                <p id="behovPersonligtBrev" class="meny-item" active>
-                    Ett verktyg behövs för att ge ett inledande "frö" till det personliga brevet, för att dels
-                    underlätta skrivandet i sig. Men även för att enklare kunna anpassa brevet efter de
-                    egenskaper/kunskaper etc som efterfrågas i annonsen. <br>
-                    <br>
-                    Resultatet ska sedan kunna skrivas ut och/eller sparas som PDF genom utskriftrutan.
-                </p>
-
-                <p id="utmaningarPersonligtBrev" class="meny-item">
-                    Den största utmaningen var att hitta och ange rätt mått för att få resultatet att matcha det man
-                    skulle skriva i exempelvis ett Word-dokument. <br>
-                    <br>
-                    Det var/är även lite svårt att få in all den information som kan tänkas behövas, på ett tydligt sätt
-                    utan att det blir för mycket. Exempelvis går det att "hovra" över en mening för att se vilket
-                    nyckelord som genererat texten. Denna lösning kom av att jag uppmärksammade att det kunde vara svårt
-                    att se varifrån texten som laddats in, kom ifrån.
-                </p>
-
-                <hr>
-                <div class="projektLankar">
-                    <a href="https://github.com/kottetall/personligtBrev?files=1" class="github" target="_blank"
-                        rel="noopener">github</a>
-                    <a href="https://kottetall.github.io/personligtBrev/" class="live" target="_blank"
-                        rel="noopener">live</a>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article class="projektBakgrund" id="projektBeslutsmotiveringar">
-        <i class="far fa-window-close fa-2x"></i>
-
-        <h1>Beslutsmotiveringar</h1>
-
-        <div class="">
-            <div class="hallareImg">
-                <img srcset="/img/beslutsmotiveringar300b.jpg 300w, /img/beslutsmotiveringar600b.jpg 600w"
-                    src="/img/beslutsmotiveringar600b.jpg" alt="Skärmklipp av Beslutsmotiveringar"
-                    class="screenshotBakgrund">
-            </div>
-            <div class="projektText">
-                <ul>
-                    <li><a class="meny active" href="#behovBeslutsmotiveringar">behov</a></li>
-                    <li><a class="meny" href="#utmaningarBeslutsmotiveringar">utmaningar</a></li>
-                    <li><a class="meny" href="#specialBeslutsmotiveringar">special</a></li>
-                </ul>
-
-
-                <p id="behovBeslutsmotiveringar" class="meny-item" active>
-                    Den vanliga arbetsgången för motiveringar är att ha en wordmall med motiveringar för olika typer av
-                    beslut.
-                    Sen går man in och ändrar de uppgifter som skiljer sig i det aktuella ärendet - exempelvis
-                    namn på den som berörs, datum etc. <br>
-                    <br>
-                    Några av problemen med detta arbetssätt är att det är ineffektivt och kan ta tid. Det finns
-                    även en stor risk att man missar att ersätta vissa "platshållare", vilket innebär att
-                    motiveringen i bästa fall innehåller saker som - "BYT UT" - eller i värsta fall
-                    personuppgifter som omfattas av sekretess, om man hämtat mallen från ett ärende. <br>
-                    <br>
-                </p>
-
-                <p id="utmaningarBeslutsmotiveringar" class="meny-item">
-                    Den största utmaningen här var faktiskt tidsmässigt. Detta var ett verktyg som jag tog fram vid
-                    sidan av mina ordinarie arbetsuppgifter. Pga tidsbristen prioriterade jag att lägga till nya beslut
-                    och funktioner framför att slimma det som jag redan skapat. <br>
-                    <br>
-                    Det var även lite av en utmaning att få kollegor att använda/testa verktyget då vår IT-miljö gjorde
-                    att verktyget enbart kunde köras i Chrome samtidigt som IE var standard. Dock släppte detta rätt
-                    snabbt när de själva fick använda det och se nyttan.
-                </p>
-
-                <p id="specialBeslutsmotiveringar" class="meny-item">
-                    Det som skiljer detta projekt mot många av mina andra är att det är utformat utifrån att användas av
-                    en arbetsförmedlare på sin arbetsdator. Detta innebär att det finns väldigt mycket yta "över", för
-                    att möjliggöra för plats för övriga program. <br>
-                    <br>
-                    En speciell funktion som lades till var att när man angav ett "giltigt"(kontrollerades mot regex)
-                    diarienummer så kom en klickbar ikon fram för att komma direkt till den aktuella
-                    akten i Arbetsförmedlingens diariesystem.
-                </p>
-                <hr>
-                <div class="projektLankar">
-                    <a href="https://github.com/kottetall/beslutsmallar?files=1" class="github" target="_blank"
-                        rel="noopener">github</a>
-                    <a href="https://kottetall.github.io/beslutsmallar/" class="live" target="_blank"
-                        rel="noopener">live</a>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article class="projektBakgrund" id="projektStodtidKvar">
-        <i class="far fa-window-close fa-2x"></i>
-
-        <h1>Beräkning av kvarvarande stödtid</h1>
-
-        <div class="">
-            <div class="hallareImg">
-                <img srcset="/img/stodtidkvar300b.jpg 300w, /img/stodtidkvar600b.jpg 600w"
-                    src="/img/stodtidkvar600b.jpg" alt="Skärmklipp av beräkning av kvarvarande stödtid"
-                    class="screenshotBakgrund">
-            </div>
-            <div class="projektText">
-                <ul>
-                    <li><a class="meny active" href="#behovStodtidKvar">behov</a></li>
-                    <li><a class="meny" href="#utmaningarStodtidKvar">utmaningar</a></li>
-                    <li><a class="meny" href="#specialStodtidKvar">special</a></li>
-                </ul>
-
-
-                <p id="behovStodtidKvar" class="meny-item" active>
-                    För att räkna ut hur lång tid som är kvar behöver arbetsförmedlaren räkna ut hur stor del av den
-                    ursprungliga tiden som har använts och vilket det nya slutdatumet blir utifrån det nya startdatumet.
-                    Sen tillkommer det att den tidigare stödtidsberäkningen kan ha skett utifrån ett tidigare regelverk
-                    och behöver anpassas till nuvarande. Dessa steg riskerar att leda till misstag och flera
-                    arbetsförmedlare tycker att det är både krångligt och omständigt att räkna ut och känner en oro över
-                    arbetsmomentet. <br>
-                    <br>
-                </p>
-
-                <p id="utmaningarStodtidKvar" class="meny-item">
-                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
-                    frågor/funderingar ***
-                </p>
-
-                <p id="specialStodtidKvar" class="meny-item">
-                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
-                    frågor/funderingar ***
-                </p>
-                <hr>
-                <div class="projektLankar">
-                    <a href="https://github.com/kottetall/gammalSt-dtid?files=1" class="github" target="_blank"
-                        rel="noopener" rel="noopener">github</a>
-                    <a href="https://kottetall.github.io/gammalSt-dtid/" class="live" target="_blank" rel="noopener"
-                        rel="noopener">live</a>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article class="projektBakgrund" id="projektTaikes">
-        <i class="far fa-window-close fa-2x"></i>
-
-        <h1>Taikes</h1>
-
-        <div class="">
-            <div class="hallareImg">
-                <img srcset="img/taikes300b.jpg 300w, img/taikes600b.jpg 600w" src="img/taikes600b.jpg"
-                    alt="Skärmklipp av Taikes" class="screenshotBakgrund">
-            </div>
-            <div class="projektText">
-                <ul>
-                    <li><a class="meny active" href="#behovTaikes">behov</a></li>
-                    <li><a class="meny" href="#utmaningarTaikes">utmaningar</a></li>
-                    <li><a class="meny" href="#specialTaikes">special</a></li>
-                </ul>
-
-
-                <p id="behovTaikes" class="meny-item">
-                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
-                    frågor/funderingar ***
-                </p>
-
-                <p id="utmaningarTaikes" class="meny-item">
-                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
-                    frågor/funderingar ***
-                </p>
-
-                <p id="specialTaikes" class="meny-item">
-                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
-                    frågor/funderingar ***
-                </p>
-                <hr>
-                <div class="projektLankar">
-                    <a href="https://github.com/kottetall/taikes?files=1" class="github" target="_blank"
-                        rel="noopener">github</a>
-                    <a href="https://kottetall.github.io/taikes/" class="live" target="_blank" rel="noopener">live</a>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article class="projektBakgrund" id="projektLatLista">
-        <i class="far fa-window-close fa-2x"></i>
-
-        <h1>Låtlista</h1>
-
-        <div class="">
-            <div class="hallareImg">
-                <img srcset="img/låtLista300b.jpg 300w, img/låtLista600b.jpg 600w" src="img/låtLista600b.jpg"
-                    alt="Skärmklipp av Låtlista" class="screenshotBakgrund">
-            </div>
-            <div class="projektText">
-                <ul>
-                    <li><a class="meny active" href="#behovLatLista">behov</a></li>
-                    <li><a class="meny" href="#utmaningarLatLista">utmaningar</a></li>
-                    <li><a class="meny" href="#specialLatLista">special</a></li>
-                </ul>
-
-
-                <p id="behovLatLista" class="meny-item">
-                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
-                    frågor/funderingar ***
-                </p>
-
-                <p id="utmaningarLatLista" class="meny-item">
-                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
-                    frågor/funderingar ***
-                </p>
-
-                <p id="specialLatLista" class="meny-item">
-                    *** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med
-                    frågor/funderingar ***
-                </p>
-                <hr>
-                <div class="projektLankar">
-                    <a href="https://github.com/kottetall/l-tLista?files=1" class="github" target="_blank"
-                        rel="noopener">github</a>
-                    <a href="https://kottetall.github.io/l-tLista/" class="live" target="_blank" rel="noopener">live</a>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <script src="src/funktioner.js"></script>
-    <script src="src/app.js"></script>
+    <script src="/src/js/funktioner.js"></script>
+    <script src="/src/js/app.js"></script>
 </body>
 
 </html>

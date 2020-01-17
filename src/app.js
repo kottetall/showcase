@@ -1,6 +1,7 @@
 "use strict"
 
 window.addEventListener("DOMContentLoaded", () => {
+
     // Om JavaScript inte funkar eller är avstängt gör detta att ett varningsmeddelande visas. Om JS funkar så visas inte rutan
     document.querySelector(".jsMissing").style.display = "none";
 
@@ -8,6 +9,12 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".merinfo").forEach((info) => {
         info.style.display = "inline";
     });
+
+
+    // Laddar projekten, förutsatt att JS körs och det inte är IE(Fetch används)
+
+    laddaProjekt()
+
 
     // "Tar bort" sorteringen. Väljer att inte använda querySelectorAll(".merinfo, .sortering") och slå samman med ovan, då detta blir tydligare. 
     document.querySelector(".sortering").style.display = "block"

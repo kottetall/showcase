@@ -1,0 +1,44 @@
+{
+    "projekt": {
+        "personligtbrev2": {
+            "filnamn": "personligtBrevNode",
+            "inprogress": true,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": true,
+                "JavaScript": false,
+                "Node": false,
+                "npm": false,
+                "Jest": false,
+                "Scss": false,
+                "databas": false,
+                "Python": false,
+                "GIT": false,
+                "Bootstrap4": false
+            },
+            "header": "Personligt brev - Version 2",
+            "sammanfattning": "Efter ett relativt lyckat 'proof of concept'(se nedan) kändes det naturligt att omvandla det hela till ett fullstack - projekt för att få ytterligare erfarenhet med Node, Express och att använda en databas(NeDb - en lightvariant av MongoDB). Ett av de svåra besluten som jag arbetar med i detta projekt är hur stor del av bearbetningen av datan som ska ske hos klienten och vad som ska ske på servern.I skrivande stund lutar det åt att klienten får ett större ansvar samtidigt som att datan delvis även kommer att sparas hos klienten för att möjliggöra vissa funktioner offline - exempelvis att lägga till nyckelord och motiveringar.",
+            "detaljtext": {
+                "behov": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sunt dolores voluptatum non eos aspernatur, harum vero libero culpa, dolor nam quis facere esse, vitae earum nemo dolorum labore atque.",
+                "utmaningar": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illo iure ratione itaque, atque est aliquam!At dignissimos, placeat nihil quam consequuntur iusto ab reiciendis.Maiores quis alias eligendi sit!",
+                "special": ""
+            },
+            "live": "",
+            "github": "https://github.com/kottetall/personligt-brev-node?files=1"
+        }
+    },
+    "verktygslada": {
+        "HTML5": "fab fa-html5",
+        "CSS3": "fab fa-css3-alt",
+        "JavaScript": "fab fa-js-square",
+        "Node": "fab fa-node",
+        "npm": "fab fa-npm",
+        "Jest": "fas fa-flask",
+        "Scss": "fab fa-sass",
+        "databas": "fas fa-database",
+        "Python": "fab fa-python",
+        "GIT": "fab fa-git-alt",
+        "Bootstrap4": "fab fa-bootstrap"
+
+    }
+}

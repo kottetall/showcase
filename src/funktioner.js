@@ -99,3 +99,152 @@ function sorteraProjekt(e) {
         }
     }
 }
+/*
+TODO:
+Snygga till skapa m.fl ex:
+    skapa(elm,options = { klass, text, attributes = {src: värde, srcset: värde etc}})
+
+*/
+
+// function test(elm, options) {
+
+//     const {
+//         klass,
+//         annat,
+//         attributes,
+//         attributes: {
+//             src
+//         }
+//     } = options
+
+//     if (elm) {
+//         console.log("elm funkar", elm)
+//     }
+//     if (options.klass) {
+//         console.log("klass funkar", options.klass)
+//     }
+//     if (attributes) {
+//         console.log("attributes funkar", attributes)
+//     }
+
+//     if (src) {
+//         console.log("src funkar", src)
+//     }
+
+// }
+
+
+// test("Teststräng", {
+//     klass: "klassens sak",
+//     text: "ja",
+//     attributes: {
+//         src: "src verkar också funka som den ska"
+//     }
+// })
+
+function skapa(elm, klass, text) {
+    const element = document.createElement(elm)
+    if (klass) {
+        element.className = klass
+    }
+    if (text) {
+        element.textContent = text
+    }
+    return element
+}
+
+function skapaIkon(klass, titel = "", storlek = "") {
+    const i = skapa("i", `${klass} ${storlek}`)
+    i.setAttribute("title", titel)
+    return i
+}
+
+function skapaA(adress, text = "") {
+    const a = skapa("a", "", text)
+    a.setAttribute("href", adress)
+    a.setAttribute("target", "_blank")
+    a.setAttribute("rel", "noopener")
+    return a
+}
+
+function skapaImg(filnamn, header) {
+    const img = skapa("img")
+    img.setAttribute("srcset", `/img/${filnamn}600b.webp 600w, /img/${filnamn}300b.webp 300w`)
+    img.setAttribute("src", `/img/${filnamn}600b.jpg`)
+    img.setAttribute("alt", `Skärmklipp av ${header}`)
+    img.dataset.projekt = filnamn
+    return img
+}
+
+async function laddaProjekt() {
+    console.log("Funkar som det ska")
+    const json = await fetch("src/projekt.json")
+    const artiklar = await json.json()
+
+    for (const artikel in artiklar.projekt) {
+        const {
+            filnamn,
+            inprogress,
+            verktyg,
+            header,
+            sammanfattning,
+            detaljtext,
+            live,
+            github
+        } = artiklar.projekt[artikel]
+
+        // MAIN
+        const article = skapa("article")
+        const rubrik = skapa("h1", "", header)
+        const container = skapa("div", "container")
+
+        const divMeta = skapa("div")
+
+
+
+        const a = skapaA(live)
+        a.className = "live"
+        const lankBild = skapaImg(filnamn, header)
+
+        a.append(lankBild)
+
+        let workInProgress = ""
+
+        if (inprogress) {
+            workInProgress = skapa("span")
+            workInProgress.className = "workInProgress"
+            workInProgress.append(skapaIkon("fas fa-tools"), "Arbete pågår med sidan", skapaIkon("fas fa-tools"))
+        }
+
+        const verktygsDiv = skapa("div", "verktyg")
+        // verktygsDiv.className = "verktyg"
+
+        for (verk in verktyg) {
+            if (verktyg[verk]) {
+                verktygsDiv.append(skapaIkon(artiklar.verktygslada[verk], verk))
+            }
+        }
+
+        divMeta.append(a, workInProgress, verktygsDiv)
+
+        const divProjektText = skapa("div", "projektText")
+
+        const p = skapa("p", "", sammanfattning)
+        const projektLankar = skapa("div", "projektLankar")
+
+        const merinfo = skapaA("merinfo", "bakgrund")
+        merinfo.dataset.projekt = filnamn
+        const githubLank = skapaA(github, "github")
+        githubLank.className = "github"
+        const liveLank = live ? skapaA(live, "live") : ""
+
+        projektLankar.append(merinfo, githubLank, liveLank)
+
+        divProjektText.append(p, projektLankar)
+
+        container.append(divMeta, divProjektText)
+        article.append(rubrik, container)
+        document.querySelector(".projekt").append(article)
+
+    }
+}

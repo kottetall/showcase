@@ -143,13 +143,20 @@ Snygga till skapa m.fl ex:
 // })
 
 function skapa(elm, klass, text) {
+    // function skapa(elm, options) {
+    //     const {
+    //         klass,
+    //         text
+    //     } = options
     const element = document.createElement(elm)
+
     if (klass) {
         element.className = klass
     }
     if (text) {
         element.textContent = text
     }
+
     return element
 }
 
@@ -205,6 +212,7 @@ async function laddaProjekt() {
         const a = skapaA(live)
         a.className = "live"
         const lankBild = skapaImg(filnamn, header)
+        lankBild.className = "screenshot"
 
         a.append(lankBild)
 

@@ -142,44 +142,90 @@ Snygga till skapa m.fl ex:
 //     }
 // })
 
-function skapa(elm, klass, text) {
-    // function skapa(elm, options) {
-    //     const {
-    //         klass,
-    //         text
-    //     } = options
+// function skapa(elm, klass, text) {
+// function skapa(elm, options = {}) {
+//     const {
+//         klass,
+//         text
+//     } = options
+//     const element = document.createElement(elm)
+
+//     if (klass) {
+//         element.className = klass
+//     }
+//     if (text) {
+//         element.textContent = text
+//     }
+
+//     return element
+// }
+
+function skapa(elm, options = {}) {
+    const {
+        klass,
+        text,
+        attributes,
+        projekt
+    } = options
+
     const element = document.createElement(elm)
 
     if (klass) {
         element.className = klass
     }
+
     if (text) {
         element.textContent = text
+    }
+
+    if (projekt) {
+        element.dataset.projekt = projekt
+    }
+
+    if (attributes) {
+        for (const att in attributes) {
+            element.setAttribute(att, attributes[att])
+        }
     }
 
     return element
 }
 
 function skapaIkon(klass, titel = "", storlek = "") {
-    const i = skapa("i", `${klass} ${storlek}`)
-    i.setAttribute("title", titel)
+    const options = {
+        klass: `${klass} ${storlek}`,
+        attributes: {
+            title: titel
+        }
+    }
+    const i = skapa("i", options)
     return i
 }
 
 function skapaA(adress, text = "") {
-    const a = skapa("a", "", text)
-    a.setAttribute("href", adress)
-    a.setAttribute("target", "_blank")
-    a.setAttribute("rel", "noopener")
+    const options = {
+        text,
+        attributes: {
+            href: adress,
+            target: "_blank",
+            rel: "noopener"
+        }
+    }
+    const a = skapa("a", options)
     return a
 }
 
 function skapaImg(filnamn, header) {
-    const img = skapa("img")
-    img.setAttribute("srcset", `/img/${filnamn}600b.webp 600w, /img/${filnamn}300b.webp 300w`)
-    img.setAttribute("src", `/img/${filnamn}600b.jpg`)
-    img.setAttribute("alt", `Skärmklipp av ${header}`)
-    img.dataset.projekt = filnamn
+    const options = {
+        attributes: {
+            srcset: `/img/${filnamn}600b.webp 600w, /img/${filnamn}300b.webp 300w`,
+            src: `/img/${filnamn}600b.jpg`,
+            alt: `Skärmklipp av ${header}`,
+            projekt: filnamn
+        }
+    }
+
+    const img = skapa("img", options)
     return img
 }
 
@@ -202,8 +248,12 @@ async function laddaProjekt() {
 
         // MAIN
         const article = skapa("article")
-        const rubrik = skapa("h1", "", header)
-        const container = skapa("div", "container")
+        const rubrik = skapa("h1", {
+            text: header
+        })
+        const container = skapa("div", {
+            klass: "container"
+        })
 
         const divMeta = skapa("div")
 
@@ -224,7 +274,9 @@ async function laddaProjekt() {
             workInProgress.append(skapaIkon("fas fa-tools"), "Arbete pågår med sidan", skapaIkon("fas fa-tools"))
         }
 
-        const verktygsDiv = skapa("div", "verktyg")
+        const verktygsDiv = skapa("div", {
+            klass: "verktyg"
+        })
         // verktygsDiv.className = "verktyg"
 
         for (verk in verktyg) {
@@ -235,10 +287,16 @@ async function laddaProjekt() {
 
         divMeta.append(a, workInProgress, verktygsDiv)
 
-        const divProjektText = skapa("div", "projektText")
+        const divProjektText = skapa("div", {
+            klass: "projektText"
+        })
 
-        const p = skapa("p", "", sammanfattning)
-        const projektLankar = skapa("div", "projektLankar")
+        const p = skapa("p", {
+            text: sammanfattning
+        })
+        const projektLankar = skapa("div", {
+            klass: "projektLankar"
+        })
 
         const merinfo = skapaA("merinfo", "bakgrund")
         merinfo.dataset.projekt = filnamn

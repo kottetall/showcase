@@ -1,11 +1,11 @@
 {
     "projekt": {
-        "personligtbrev2": {
-            "filnamn": "personligtBrevNode",
-            "inprogress": true,
+        "default": {
+            "filnamn": "default",
+            "inprogress": false,
             "verktyg": {
-                "HTML5": true,
-                "CSS3": true,
+                "HTML5": false,
+                "CSS3": false,
                 "JavaScript": false,
                 "Node": false,
                 "npm": false,
@@ -16,15 +16,224 @@
                 "GIT": false,
                 "Bootstrap4": false
             },
+            "header": "Exempelprojekt",
+            "sammanfattning": "Exempel",
+            "detaljtext": {
+                "behov": "Exempel behov",
+                "utmaningar": "exempel utmaningar",
+                "special": ""
+            },
+            "live": "",
+            "github": "placeholder.com"
+        },
+        "personligtbrev2": {
+            "filnamn": "personligtBrevNode",
+            "inprogress": true,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": true,
+                "JavaScript": true,
+                "Node": true,
+                "npm": true,
+                "Jest": true,
+                "Scss": true,
+                "databas": true,
+                "Python": false,
+                "GIT": true,
+                "Bootstrap4": false
+            },
             "header": "Personligt brev - Version 2",
             "sammanfattning": "Efter ett relativt lyckat 'proof of concept'(se nedan) kändes det naturligt att omvandla det hela till ett fullstack - projekt för att få ytterligare erfarenhet med Node, Express och att använda en databas(NeDb - en lightvariant av MongoDB). Ett av de svåra besluten som jag arbetar med i detta projekt är hur stor del av bearbetningen av datan som ska ske hos klienten och vad som ska ske på servern.I skrivande stund lutar det åt att klienten får ett större ansvar samtidigt som att datan delvis även kommer att sparas hos klienten för att möjliggöra vissa funktioner offline - exempelvis att lägga till nyckelord och motiveringar.",
             "detaljtext": {
                 "behov": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sunt dolores voluptatum non eos aspernatur, harum vero libero culpa, dolor nam quis facere esse, vitae earum nemo dolorum labore atque.",
-                "utmaningar": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illo iure ratione itaque, atque est aliquam!At dignissimos, placeat nihil quam consequuntur iusto ab reiciendis.Maiores quis alias eligendi sit!",
+                "utmaningar": "Placeat nihil quam consequuntur iusto ab reiciendis.Maiores quis alias eligendi sit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illo iure ratione itaque, atque est aliquam!At dignissimos.",
                 "special": ""
             },
-            "live": "#",
+            "live": "",
             "github": "https://github.com/kottetall/personligt-brev-node?files=1"
+        },
+        "cssChecker": {
+            "filnamn": "cssChecker",
+            "inprogress": true,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": true,
+                "JavaScript": true,
+                "Node": true,
+                "npm": true,
+                "Jest": false,
+                "Scss": false,
+                "databas": false,
+                "Python": false,
+                "GIT": true,
+                "Bootstrap4": true
+            },
+            "header": "Css checker",
+            "sammanfattning": "Detta är ett test/en prototyp av en idé jag fick om en sida som kunde kontrollera hur bakåtkompatibelt ens CSSvar. Detta är knappast en ny idé, då det redan finns fletalet sidor som gör samma sak, och bättre. Det kan även, till viss del, ses som överflödigt då man exempelvis genom Sass får CSS som är kompatibelt med väldigt många olika webbläsare/versioner. Dock finns det en vinst i att försöka lära sig hur dessa verktyg kan vara uppbyggda samtidigt som det är tillfredställande att försöka lösa problemet själv.",
+            "detaljtext": {
+                "behov": "Målet med detta projekt är att kunna ta en eller flera CSS-filer och ladda upp dem till servern, som sedan kollar de 'properties' man använt mot mozillas översikt. Sen får man en överblick av vilka av dem som kan vara i vägen för att sidan ska fungera bra med äldre webbläsare. Jag såg/ser äver detta som ett bra tillfälle att testa Bootstrap 4, till skilland från 'vanligt' CSS och SCSS som jag normalt är van vid. Även om projektet knappast gör mig till expert på Bootstrap så ger det erfarenhet som jag kan använda i framtiden.",
+                "utmaningar": "Tidigt i projektet bestämde jag att grundprocessen skulle ske genom att klienten konverterade CSS-filerna till en sträng som servern analyserade. Detta skedde bland annat för att försöka hålla nere antalet moduler i Node, då Express inte själv kunde hantera uppladdade filer. Ytterligare en utmaning var att hitta en/ett bra regex som fann de 'properties' som var relevanta samtidigt som man fick ett lågt antal 'false positives'. Lösningen blev att dela upp processen snarare än att försöka plocka ut alla delar 'i ett svep'",
+                "special": ""
+            },
+            "live": "",
+            "github": "https://github.com/kottetall/cssChecker?files=1"
+        },
+        "portfolio": {
+            "filnamn": "portfolio",
+            "inprogress": true,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": false,
+                "JavaScript": true,
+                "Node": false,
+                "npm": false,
+                "Jest": false,
+                "Scss": true,
+                "databas": false,
+                "Python": false,
+                "GIT": true,
+                "Bootstrap4": false
+            },
+            "header": "Min portfolio(denna sida)",
+            "sammanfattning": "Denna sida är tänkt att på ett relativt överskådligt vis visa de projekt jag arbetat/arbetar på samtidigt som det ska vara möjligt att se koden bakom. Denna sida är medvetet 'spartansk' då jag drivs mer av problemlösningen bakom webbutveckling snarare än den ytliga designen av resultatet(även om jag givetvis inte har några problem att arbeta med den). Arbetet med sidan är ständigt pågående, då jag försöker hålla projekten uppdaterade såväl som att 'tweaka' på koden.",
+            "detaljtext": {
+                "behov": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
+                "utmaningar": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
+                "special": ""
+            },
+            "live": "",
+            "github": "https://github.com/kottetall/showcase?files=1"
+        },
+        "personligtBrev": {
+            "filnamn": "personligtBrev",
+            "inprogress": false,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": true,
+                "JavaScript": true,
+                "Node": false,
+                "npm": false,
+                "Jest": false,
+                "Scss": false,
+                "databas": false,
+                "Python": false,
+                "GIT": true,
+                "Bootstrap4": false
+            },
+            "header": "Personligt brev - Generator",
+            "sammanfattning": "När man ska söka ett jobb kan det vara svårt att skriva ett personligt brev, och det främsta hindret brukar vara starten. Syftet med detta 'proof of concept' är att skapa en kärna till det personliga brevet, baserat på annonstexten. För närvarande arbetar jag med version 2.0 som använder sig av Node, med 'nedb' och 'Express', där målet bland annat är att användare ska kunna skapa konton och spara sina egna motiveringar i en databas, istället för i en JSON-fil som i detta exempel.",
+            "detaljtext": {
+                "behov": "Ett verktyg behövs för att ge ett inledande 'frö' till det personliga brevet, för att dels underlätta skrivandet i sig. Men även för att enklare kunna anpassa brevet efter de egenskaper/kunskaper etc som efterfrågas i annonsen. Resultatet ska sedan kunna skrivas ut och/eller sparas som PDF genom utskriftrutan.",
+                "utmaningar": "Den största utmaningen var att hitta och ange rätt mått för att få resultatet att matcha det man skulle skriva i exempelvis ett Word-dokument. Det var/är även lite svårt att få in all den information som kan tänkas behövas, på ett tydligt sätt utan att det blir för mycket. Exempelvis går det att 'hovra' över en mening för att se vilket nyckelord som genererat texten. Denna lösning kom av att jag uppmärksammade att det kunde vara svårt att se varifrån texten som laddats in, kom ifrån.",
+                "special": ""
+            },
+            "live": "https://kottetall.github.io/personligtBrev/",
+            "github": "https://github.com/kottetall/personligtBrev?files=1"
+        },
+        "beslutsmotiveringar": {
+            "filnamn": "beslutsmotiveringar",
+            "inprogress": false,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": true,
+                "JavaScript": true,
+                "Node": false,
+                "npm": false,
+                "Jest": false,
+                "Scss": false,
+                "databas": false,
+                "Python": false,
+                "GIT": false,
+                "Bootstrap4": false
+            },
+            "header": "Beslutsmotiveringsmallar (arbetsförmedlingen)",
+            "sammanfattning": "När man tar beslut på en myndighet ska grunderna för detta motiveras (32 § Förvaltningslagen[2017:900]). Detta verktyg effektiviserar och kvalitétssäkrar motiveringen genom att man får fylla i de uppgifter som är relevanta i ärendet på en plats och sedan genereras en motivering utifrån detta.",
+            "detaljtext": {
+                "behov": "Den vanliga arbetsgången för motiveringar är att ha en wordmall med motiveringar för olika typer av beslut. Sen går man in och ändrar de uppgifter som skiljer sig i det aktuella ärendet - exempelvis namn på den som berörs, datum etc. Några av problemen med detta arbetssätt är att det är ineffektivt och kan ta tid. Det finns även en stor risk att man missar att ersätta vissa 'platshållare', vilket innebär att motiveringen i bästa fall innehåller saker som - 'BYT UT' - eller i värsta fall personuppgifter som omfattas av sekretess, om man hämtat mallen från ett ärende.",
+                "utmaningar": "Den största utmaningen här var faktiskt tidsmässigt. Detta var ett verktyg som jag tog fram vid sidan av mina ordinarie arbetsuppgifter. Pga tidsbristen prioriterade jag att lägga till nya beslut och funktioner framför att slimma det som jag redan skapat. Det var även lite av en utmaning att få kollegor att använda/testa verktyget då vår IT-miljö gjorde att verktyget enbart kunde köras i Chrome samtidigt som IE var standard. Dock släppte detta rätt snabbt när de själva fick använda det och se nyttan.",
+                "special": "Det som skiljer detta projekt mot många av mina andra är att det är utformat utifrån att användas av för att möjliggöra för plats för övriga program. En speciell funktion som lades till var att när man angav ett 'giltigt'(kontrollerades mot regex) diarienummer så kom en klickbar ikon fram för att komma direkt till den aktuella akten i Arbetsförmedlingens diariesystem."
+            },
+            "live": "https://kottetall.github.io/beslutsmallar/",
+            "github": "https://github.com/kottetall/beslutsmallar?files=1"
+        },
+        "stodtidkvar": {
+            "filnamn": "stodtidkvar",
+            "inprogress": false,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": true,
+                "JavaScript": true,
+                "Node": false,
+                "npm": false,
+                "Jest": false,
+                "Scss": false,
+                "databas": false,
+                "Python": false,
+                "GIT": false,
+                "Bootstrap4": false
+            },
+            "header": "Kvarvarande stödtid vid nystartsjobb(arbetsförmedlingen)",
+            "sammanfattning": "Vid anställningar med stöd i form av Nystartsjobb går det att använda stödtid som tidigare räknats ut för den sökande, men som inte använts(18 § förordning[2018:43] om stöd för nystartsjobb). Detta verktyg förenklar processen genom att man bara behöver skriva in de datum som är relevanta och sedan trycka på 'räkna ut'. Verktyget ger sedan den nya perioden tillsammans med en översikt av uträkningen, vilket möjliggör en transparent granskning.",
+            "detaljtext": {
+                "behov": "För att räkna ut hur lång tid som är kvar behöver arbetsförmedlaren räkna ut hur stor del av den ursprungliga tiden som har använts och vilket det nya slutdatumet blir utifrån det nya startdatumet. Sen tillkommer det att den tidigare stödtidsberäkningen kan ha skett utifrån ett tidigare regelverk och behöver anpassas till nuvarande. Dessa steg riskerar att leda till misstag och flera arbetsförmedlare tycker att det är både krångligt och omständigt att räkna ut och känner en oro över arbetsmomentet.",
+                "utmaningar": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor/funderingar ***",
+                "special": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor/funderingar ***"
+            },
+            "live": "https://kottetall.github.io/gammalSt-dtid/",
+            "github": "https://github.com/kottetall/gammalSt-dtid?files=1"
+        },
+        "taikes": {
+            "filnamn": "taikes",
+            "inprogress": true,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": true,
+                "JavaScript": true,
+                "Node": false,
+                "npm": false,
+                "Jest": false,
+                "Scss": false,
+                "databas": false,
+                "Python": false,
+                "GIT": true,
+                "Bootstrap4": false
+            },
+            "header": "Exempelprojekt",
+            "sammanfattning": "Detta är en omarbetad version av Taikes ursprungliga hemsida. Grundidén som hemsidan skapats utifrån är tanken kring slumpade text-citat från låtar. Den nya sidan har byggts upp runt denna idé genom HTML, CSS och JavaScript, utan externa bibliotek.",
+            "detaljtext": {
+                "behov": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor/funderingar ***",
+                "utmaningar": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor/funderingar ***",
+                "special": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor/funderingar ***"
+            },
+            "originalsida": "https://www.taikes.com",
+            "live": "https://kottetall.github.io/taikes/",
+            "github": "https://github.com/kottetall/taikes?files=1"
+        },
+        "latLista": {
+            "filnamn": "latLista",
+            "inprogress": false,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": true,
+                "JavaScript": true,
+                "Node": false,
+                "npm": false,
+                "Jest": false,
+                "Scss": false,
+                "databas": false,
+                "Python": false,
+                "GIT": true,
+                "Bootstrap4": false
+            },
+            "header": "Låtlista",
+            "sammanfattning": "Detta projekt skapades som en lösning på ett problem jag hade: Jag hade en gammal låtlista/-översikt över låtar som fanns på min dator 2005. Jag ville på ett (relativt) snabbt sätt kunna gå igenom listan och se vilka låtar som fanns samt kunna kopiera artist och låtnamn smidigt för kolla om de fanns på Spotify. Resultatet är en lista där man kan ta bort en listpost(ej bestående) och/eller kopiera artist- och låtnamn till urklipp.",
+            "detaljtext": {
+                "behov": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor/funderingar ***",
+                "utmaningar": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor/funderingar ***",
+                "special": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor/funderingar ***"
+            },
+            "live": "https://kottetall.github.io/l-tLista/",
+            "github": "https://github.com/kottetall/l-tLista?files=1"
         }
     },
     "verktygslada": {

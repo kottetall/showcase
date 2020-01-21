@@ -44,7 +44,7 @@ function multiEventListener(element, funktionen) {
 
 function oppnaModal(e) {
     e.preventDefault();
-    let id = "#projekt" + e.srcElement.dataset["projekt"]
+    let id = "#projekt" + e.srcElement.dataset.projekt
 
     // öppnar modal
     let modal = document.querySelector(id);
@@ -76,6 +76,7 @@ function oppnaModal(e) {
             ursprung.classList.remove("active");
             e.target.classList.add("active");
 
+
             document.querySelector(ursprungId).style.display = "none";
             document.querySelector(malId).style.display = "block";
         });
@@ -99,93 +100,16 @@ function sorteraProjekt(e) {
         }
     }
 }
-/*
-TODO:
-Snygga till skapa m.fl ex:
-    skapa(elm,options = { klass, text, attributes = {src: värde, srcset: värde etc}})
-
-*/
-
-// function test(elm, options) {
-
-//     const {
-//         klass,
-//         annat,
-//         attributes,
-//         attributes: {
-//             src
-//         }
-//     } = options
-
-//     if (elm) {
-//         console.log("elm funkar", elm)
-//     }
-//     if (options.klass) {
-//         console.log("klass funkar", options.klass)
-//     }
-//     if (attributes) {
-//         console.log("attributes funkar", attributes)
-//     }
-
-//     if (src) {
-//         console.log("src funkar", src)
-//     }
-
-// }
 
 
-// test("Teststräng", {
-//     klass: "klassens sak",
-//     text: "ja",
-//     attributes: {
-//         src: "src verkar också funka som den ska"
-//     }
-// })
-
-// function skapa(elm, klass, text) {
-// function skapa(elm, options = {}) {
-//     const {
-//         klass,
-//         text
-//     } = options
-//     const element = document.createElement(elm)
-
-//     if (klass) {
-//         element.className = klass
-//     }
-//     if (text) {
-//         element.textContent = text
-//     }
-
-//     return element
-// }
-
-function skapa(elm, options = {}) {
-    const {
-        klass,
-        text,
-        attributes,
-        projekt
-    } = options
-
+function skapa(elm, options = {}, text) {
     const element = document.createElement(elm)
-
-    if (klass) {
-        element.className = klass
-    }
 
     if (text) {
         element.textContent = text
     }
-
-    if (projekt) {
-        element.dataset.projekt = projekt
-    }
-
-    if (attributes) {
-        for (const att in attributes) {
-            element.setAttribute(att, attributes[att])
-        }
+    for (const opt in options) {
+        element.setAttribute(opt, options[opt])
     }
 
     return element
@@ -193,10 +117,8 @@ function skapa(elm, options = {}) {
 
 function skapaIkon(klass, titel = "", storlek = "") {
     const options = {
-        klass: `${klass} ${storlek}`,
-        attributes: {
-            title: titel
-        }
+        class: `${klass} ${storlek}`,
+        title: titel
     }
     const i = skapa("i", options)
     return i
@@ -204,25 +126,19 @@ function skapaIkon(klass, titel = "", storlek = "") {
 
 function skapaA(adress, text = "") {
     const options = {
-        text,
-        attributes: {
-            href: adress,
-            target: "_blank",
-            rel: "noopener"
-        }
+        href: adress,
+        target: "_blank",
+        rel: "noopener"
     }
-    const a = skapa("a", options)
+    const a = skapa("a", options, text)
     return a
 }
 
 function skapaImg(filnamn, header) {
     const options = {
-        attributes: {
-            srcset: `/img/${filnamn}600b.webp 600w, /img/${filnamn}300b.webp 300w`,
-            src: `/img/${filnamn}600b.jpg`,
-            alt: `Skärmklipp av ${header}`,
-            projekt: filnamn
-        }
+        src: `/img/${filnamn}600b.jpg`,
+        alt: `Skärmklipp av ${header}`,
+        "data-projekt": filnamn
     }
 
     const img = skapa("img", options)
@@ -230,87 +146,212 @@ function skapaImg(filnamn, header) {
 }
 
 async function laddaProjekt() {
-    console.log("Funkar som det ska")
     const json = await fetch("src/projekt.json")
     const artiklar = await json.json()
 
     for (const artikel in artiklar.projekt) {
-        const {
-            filnamn,
-            inprogress,
-            verktyg,
-            header,
-            sammanfattning,
-            detaljtext,
-            live,
-            github
-        } = artiklar.projekt[artikel]
+        if (artikel !== "default") { //För att inte visa "mallObjektet" i JSON-filen
 
-        // MAIN
-        const article = skapa("article")
-        const rubrik = skapa("h1", {
-            text: header
-        })
-        const container = skapa("div", {
-            klass: "container"
-        })
+            const {
+                filnamn,
+                inprogress,
+                verktyg,
+                header,
+                sammanfattning,
+                detaljtext,
+                live,
+                github
+            } = artiklar.projekt[artikel]
 
-        const divMeta = skapa("div")
+            // MAIN
+            const article = skapa("article")
+            const rubrik = skapa("h1", {}, header)
+            const container = skapa("div", {
+                class: "container"
+            })
+
+            const divMeta = skapa("div")
 
 
 
-        const a = skapaA(live)
-        a.className = "live"
-        const lankBild = skapaImg(filnamn, header)
-        lankBild.className = "screenshot"
+            const a = live !== "" ? skapaA(live) : skapaA("#")
+            a.className = "live"
+            const lankBild = skapaImg(filnamn, header)
+            lankBild.className = "screenshot"
 
-        a.append(lankBild)
+            a.append(lankBild)
 
-        let workInProgress = ""
+            let workInProgress = ""
 
-        if (inprogress) {
-            workInProgress = skapa("span")
-            workInProgress.className = "workInProgress"
-            workInProgress.append(skapaIkon("fas fa-tools"), "Arbete pågår med sidan", skapaIkon("fas fa-tools"))
-        }
-
-        const verktygsDiv = skapa("div", {
-            klass: "verktyg"
-        })
-        // verktygsDiv.className = "verktyg"
-
-        for (verk in verktyg) {
-            if (verktyg[verk]) {
-                verktygsDiv.append(skapaIkon(artiklar.verktygslada[verk], verk))
+            if (inprogress) {
+                workInProgress = skapa("span")
+                workInProgress.className = "workInProgress"
+                workInProgress.append(skapaIkon("fas fa-tools"), "Arbete pågår med sidan", skapaIkon("fas fa-tools"))
             }
+
+            const verktygsDiv = skapa("div", {
+                class: "verktyg"
+            })
+
+            for (verk in verktyg) {
+                if (verktyg[verk]) {
+                    verktygsDiv.append(skapaIkon(artiklar.verktygslada[verk], verk))
+                }
+            }
+
+            divMeta.append(a, workInProgress, verktygsDiv)
+
+            const divProjektInformation = skapa("div", {
+                class: "projektText"
+            })
+
+            const p = skapa("p", {}, sammanfattning)
+            const projektLankar = skapa("div", {
+                class: "projektLankar"
+            })
+
+            const merinfo = skapaA("#", "bakgrund")
+            merinfo.className = "merinfo"
+            merinfo.dataset.projekt = filnamn
+            const githubLank = skapaA(github, "github")
+            githubLank.className = "github"
+            const liveLank = live ? skapaA(live, "live") : ""
+
+            projektLankar.append(merinfo, githubLank, liveLank)
+
+            divProjektInformation.append(p, projektLankar)
+
+            container.append(divMeta, divProjektInformation)
+            article.append(rubrik, container, skapa("hr"))
+            document.querySelector(".projekt").append(article)
+
+
+            // MODULER - DETALJSIDAN
+
+            //TODO: skapa div för modals och koppla dem dit
+
+            const projektBakgrund = skapa("article", {
+                class: "projektBakgrund",
+                id: `projekt${filnamn}`
+            })
+
+            const iClose = skapaIkon("far fa-window-close", "stäng fönster", "fa-2x")
+            iClose.setAttribute("tabindex", "0")
+
+            const rubrikMerInfo = skapa("h1", {}, header)
+
+            const hallare = skapa("div")
+            const hallareImg = skapa("div", {
+                class: "hallareImg"
+            })
+
+            const exempelBild = skapaImg(filnamn, header)
+            exempelBild.className = "screenshotBakgrund"
+
+            hallareImg.append(exempelBild)
+
+
+            const projektText = skapa("div", {
+                class: "projektText"
+            })
+
+            const {
+                behov,
+                utmaningar,
+                special
+            } = detaljtext
+
+            const ul = skapa("ul")
+            const liBehov = skapa("li")
+            const aBehov = skapa("a", {
+                class: "meny active",
+                href: `#behov${filnamn}`
+            }, "behov")
+            liBehov.append(aBehov)
+
+            const liUtmaningar = skapa("li")
+            const aUtmaningar = skapa("a", {
+                class: "meny",
+                href: `#utmaningar${filnamn}`,
+            }, "utmaningar")
+
+            liUtmaningar.append(aUtmaningar)
+            ul.append(liBehov, liUtmaningar)
+
+
+            const pBehov = skapa("p", {
+                id: `behov${filnamn}`,
+                class: "meny-item",
+                active: ""
+            }, behov)
+
+            const pUtmaningar = skapa("p", {
+                id: `utmaningar${filnamn}`,
+                class: "meny-item"
+            }, utmaningar)
+
+            let pSpecial = "" //TODO: snygga till lösning
+
+            if (special) {
+                // TODO: gör så alla menyerna läggs till med loop och samma med länkar
+                const liSpecial = skapa("li")
+                const aSpecial = skapa("a", {
+                    class: "meny",
+                    href: `#special${filnamn}`
+                }, "special")
+                liSpecial.append(aSpecial)
+                ul.append(liSpecial)
+
+                pSpecial = skapa("p", {
+                    id: `special${filnamn}`,
+                    class: "meny-item"
+                }, special)
+            }
+
+            projektLankarMerInfo = skapa("div", {
+                class: "projektLankar"
+            })
+
+            const githubLankMerInfo = skapaA(github, "github")
+            githubLankMerInfo.className = "github"
+            const liveLankMerInfo = live ? skapaA(live, "live") : ""
+            projektLankarMerInfo.append(githubLankMerInfo, liveLankMerInfo)
+            projektText.append(ul, pBehov, pUtmaningar, pSpecial, skapa("hr"), projektLankarMerInfo)
+
+
+            hallare.append(hallareImg, projektText)
+            projektBakgrund.append(iClose, rubrikMerInfo, hallare)
+            document.querySelector(".projektmoduler").append(projektBakgrund)
+
+
+
+
         }
 
-        divMeta.append(a, workInProgress, verktygsDiv)
 
-        const divProjektText = skapa("div", {
-            klass: "projektText"
-        })
 
-        const p = skapa("p", {
-            text: sammanfattning
-        })
-        const projektLankar = skapa("div", {
-            klass: "projektLankar"
-        })
 
-        const merinfo = skapaA("merinfo", "bakgrund")
-        merinfo.dataset.projekt = filnamn
-        const githubLank = skapaA(github, "github")
-        githubLank.className = "github"
-        const liveLank = live ? skapaA(live, "live") : ""
 
-        projektLankar.append(merinfo, githubLank, liveLank)
 
-        divProjektText.append(p, projektLankar)
 
-        container.append(divMeta, divProjektText)
-        article.append(rubrik, container)
-        document.querySelector(".projekt").append(article)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }

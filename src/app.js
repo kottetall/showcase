@@ -1,6 +1,6 @@
 "use strict"
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", async () => {
 
     // Om JavaScript inte funkar eller är avstängt gör detta att ett varningsmeddelande visas. Om JS funkar så visas inte rutan
     document.querySelector(".jsMissing").style.display = "none";
@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Laddar projekten, förutsatt att JS körs och det inte är IE(Fetch används)
 
-    laddaProjekt()
+    await laddaProjekt()
 
 
     // "Tar bort" sorteringen. Väljer att inte använda querySelectorAll(".merinfo, .sortering") och slå samman med ovan, då detta blir tydligare. 
@@ -39,6 +39,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // för modals - öppna och stänga
     let merInfos = document.querySelectorAll(".merinfo");
     for (let merInfo of merInfos) {
+
         merInfo.addEventListener("click", oppnaModal);
     };
 

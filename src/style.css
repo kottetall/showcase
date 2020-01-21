@@ -49,6 +49,10 @@ a:hover, a:focus, a:active {
   color: #fff;
 }
 
+a[href=""] {
+  display: none;
+}
+
 hr {
   margin: 2vh 0 2vh 0;
 }
@@ -409,10 +413,6 @@ footer .kontakt:hover {
 
 .meny-item:target {
   display: block;
-}
-
-.merinfo {
-  display: none;
 }
 
 .kontakt {

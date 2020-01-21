@@ -56,6 +56,10 @@ a {
         text-decoration: underline;
         color: $main-text;
     }
+
+    &[href=""] {
+        display: none;
+    }
 }
 
 hr {
@@ -411,9 +415,9 @@ footer {
     }
 }
 
-.merinfo {
-    display: none;
-}
+// .merinfo {
+//     // display: none;
+// }
 
 .kontakt {
     background: rgba(73, 73, 73, 0.9);

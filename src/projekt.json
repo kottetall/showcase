@@ -19,12 +19,64 @@
             "header": "Exempelprojekt",
             "sammanfattning": "Exempel",
             "detaljtext": {
-                "behov": "Exempel behov",
-                "utmaningar": "exempel utmaningar",
+                "behov": "",
+                "utmaningar": "",
                 "special": ""
             },
             "live": "",
             "github": "placeholder.com"
+        },
+        "tickTackToe": {
+            "filnamn": "tickTackToe",
+            "inprogress": true,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": true,
+                "JavaScript": true,
+                "Node": false,
+                "npm": false,
+                "Jest": false,
+                "Scss": false,
+                "databas": false,
+                "Python": false,
+                "GIT": true,
+                "Bootstrap4": false
+            },
+            "header": "Tick tack toe",
+            "sammanfattning": "Efter att jag fick möjligheten att genomföra denna uppgift på ett kodtest hos ett företag, ville jag göra en 'riktig' variant och detta är resultatet. Även om det står att den är under uppbyggnad så är den klar, dock är den i behov av att snyggas till samt få lite ytterligare funktioner tillagda.",
+            "detaljtext": {
+                "behov": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
+                "utmaningar": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
+                "special": ""
+            },
+            "live": "https://kottetall.github.io/ticktacktoe/",
+            "github": "https://github.com/kottetall/ticktacktoe?files=1 "
+        },
+        "fizzBuzzTheGame": {
+            "filnamn": "fizzBuzzTheGame",
+            "inprogress": true,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": true,
+                "JavaScript": true,
+                "Node": false,
+                "npm": false,
+                "Jest": false,
+                "Scss": false,
+                "databas": false,
+                "Python": false,
+                "GIT": true,
+                "Bootstrap4": false
+            },
+            "header": "Fizzbuzz - The game",
+            "sammanfattning": "Min snabbversion av klassikern Fizzbuzz där jag försökt lägga till några småutmaningar för att göra det lite unikt. Spelet är fortfarande under uppbyggnad då det finns funktioner - nedräkning av tid - som jag inte fått till samt kosmetiska saker.",
+            "detaljtext": {
+                "behov": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
+                "utmaningar": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
+                "special": ""
+            },
+            "live": "https://kottetall.github.io/fizzbuzzGame/",
+            "github": "https://github.com/kottetall/fizzbuzzGame?files=1"
         },
         "personligtbrev2": {
             "filnamn": "personligtBrevNode",
@@ -45,8 +97,8 @@
             "header": "Personligt brev - Version 2",
             "sammanfattning": "Efter ett relativt lyckat 'proof of concept'(se nedan) kändes det naturligt att omvandla det hela till ett fullstack - projekt för att få ytterligare erfarenhet med Node, Express och att använda en databas(NeDb - en lightvariant av MongoDB). Ett av de svåra besluten som jag arbetar med i detta projekt är hur stor del av bearbetningen av datan som ska ske hos klienten och vad som ska ske på servern.I skrivande stund lutar det åt att klienten får ett större ansvar samtidigt som att datan delvis även kommer att sparas hos klienten för att möjliggöra vissa funktioner offline - exempelvis att lägga till nyckelord och motiveringar.",
             "detaljtext": {
-                "behov": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sunt dolores voluptatum non eos aspernatur, harum vero libero culpa, dolor nam quis facere esse, vitae earum nemo dolorum labore atque.",
-                "utmaningar": "Placeat nihil quam consequuntur iusto ab reiciendis.Maiores quis alias eligendi sit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illo iure ratione itaque, atque est aliquam!At dignissimos.",
+                "behov": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
+                "utmaningar": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
                 "special": ""
             },
             "live": "",

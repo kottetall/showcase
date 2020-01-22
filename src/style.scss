@@ -268,8 +268,10 @@ footer {
 }
 
 .container {
+    position: relative;
     display: flex;
     margin-bottom: 2vh;
+    // overflow: hidden;
 }
 
 .sida .container {
@@ -301,6 +303,18 @@ footer {
     &:hover {
         cursor: pointer;
     }
+}
+
+.largeImg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center top;
+}
+
+.largeImg:hover {
+    cursor: pointer;
 }
 
 .projektLankar {
@@ -437,5 +451,12 @@ footer {
     & i {
         color: $main-text;
         margin-right: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .largeImg {
+        display: none;
     }
 }

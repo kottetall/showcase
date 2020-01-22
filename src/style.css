@@ -260,6 +260,7 @@ footer .kontakt:hover {
 }
 
 .container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,6 +297,18 @@ footer .kontakt:hover {
 }
 
 .screenshot:hover {
+  cursor: pointer;
+}
+
+.largeImg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+
+.largeImg:hover {
   cursor: pointer;
 }
 
@@ -439,5 +452,11 @@ footer .kontakt:hover {
 .kontakt i {
   color: #fff;
   margin-right: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .largeImg {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

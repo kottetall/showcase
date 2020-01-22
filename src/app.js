@@ -43,4 +43,11 @@ window.addEventListener("DOMContentLoaded", async () => {
         merInfo.addEventListener("click", oppnaModal);
     };
 
+    // för stora bilder vid hover
+    document.querySelectorAll(".screenshot").forEach((shot) => {
+        shot.addEventListener("mouseenter", (e) => {
+            showLarge(e)
+        })
+    })
+
 });

@@ -28,7 +28,7 @@
         },
         "tickTackToe": {
             "filnamn": "tickTackToe",
-            "inprogress": true,
+            "inprogress": false,
             "verktyg": {
                 "HTML5": true,
                 "CSS3": true,
@@ -132,7 +132,7 @@
         },
         "portfolio": {
             "filnamn": "portfolio",
-            "inprogress": true,
+            "inprogress": false,
             "verktyg": {
                 "HTML5": true,
                 "CSS3": false,

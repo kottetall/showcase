@@ -43,3 +43,12 @@ function sorteraProjekt(e) {
         }
     }
 }
+
+function finnsYtterligareInfo(detaljtext) {
+    for (let text in detaljtext) {
+        if (detaljtext[text]) {
+            return true
+        }
+    }
+    return false
+}

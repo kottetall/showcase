@@ -14,7 +14,8 @@
                 "databas": false,
                 "Python": false,
                 "GIT": false,
-                "Bootstrap4": false
+                "Bootstrap4": false,
+                "VisualBasic": false
             },
             "header": "Exempelprojekt",
             "sammanfattning": "Exempel",
@@ -25,6 +26,33 @@
             },
             "live": "",
             "github": "placeholder.com"
+        },
+        "tickTackToeVB": {
+            "filnamn": "tickTackToeVB",
+            "inprogress": false,
+            "verktyg": {
+                "HTML5": false,
+                "CSS3": false,
+                "JavaScript": false,
+                "Node": false,
+                "npm": false,
+                "Jest": false,
+                "Scss": false,
+                "databas": false,
+                "Python": false,
+                "GIT": true,
+                "Bootstrap4": false,
+                "VisualBasic": true
+            },
+            "header": "Tick tack toe (Visual Basic .NET)",
+            "sammanfattning": "För att se hur mina rostiga kunskaper inom VBA skulle översättas till Visual Basic gjorde jag en 'tre i rad'-app. Fokus låg inte på det estetiska, utan enbart på att få en funktionell app.",
+            "detaljtext": {
+                "behov": false,
+                "utmaningar": false,
+                "special": false
+            },
+            "live": "",
+            "github": "https://github.com/kottetall/ticktacktoeVB?files=1"
         },
         "tickTackToe": {
             "filnamn": "tickTackToe",
@@ -45,12 +73,12 @@
             "header": "Tick tack toe",
             "sammanfattning": "Efter att jag fick möjligheten att genomföra denna uppgift på ett kodtest hos ett företag, ville jag göra en 'riktig' variant och detta är resultatet. Även om det står att den är under uppbyggnad så är den klar, dock är den i behov av att snyggas till samt få lite ytterligare funktioner tillagda.",
             "detaljtext": {
-                "behov": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
-                "utmaningar": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
+                "behov": false,
+                "utmaningar": false,
                 "special": ""
             },
             "live": "https://kottetall.github.io/ticktacktoe/",
-            "github": "https://github.com/kottetall/ticktacktoe?files=1 "
+            "github": "https://github.com/kottetall/ticktacktoe?files=1"
         },
         "fizzBuzzTheGame": {
             "filnamn": "fizzBuzzTheGame",
@@ -71,8 +99,8 @@
             "header": "Fizzbuzz - The game",
             "sammanfattning": "Min snabbversion av klassikern Fizzbuzz där jag försökt lägga till några småutmaningar för att göra det lite unikt. Spelet är fortfarande under uppbyggnad då det finns funktioner - nedräkning av tid - som jag inte fått till samt kosmetiska saker.",
             "detaljtext": {
-                "behov": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
-                "utmaningar": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
+                "behov": false,
+                "utmaningar": false,
                 "special": ""
             },
             "live": "https://kottetall.github.io/fizzbuzzGame/",
@@ -97,8 +125,8 @@
             "header": "Personligt brev - Version 2",
             "sammanfattning": "Efter ett relativt lyckat 'proof of concept'(se nedan) kändes det naturligt att omvandla det hela till ett fullstack - projekt för att få ytterligare erfarenhet med Node, Express och att använda en databas(NeDb - en lightvariant av MongoDB). Ett av de svåra besluten som jag arbetar med i detta projekt är hur stor del av bearbetningen av datan som ska ske hos klienten och vad som ska ske på servern.I skrivande stund lutar det åt att klienten får ett större ansvar samtidigt som att datan delvis även kommer att sparas hos klienten för att möjliggöra vissa funktioner offline - exempelvis att lägga till nyckelord och motiveringar.",
             "detaljtext": {
-                "behov": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
-                "utmaningar": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
+                "behov": false,
+                "utmaningar": false,
                 "special": ""
             },
             "live": "",
@@ -149,8 +177,8 @@
             "header": "Min portfolio(denna sida)",
             "sammanfattning": "Denna sida är tänkt att på ett relativt överskådligt vis visa de projekt jag arbetat/arbetar på samtidigt som det ska vara möjligt att se koden bakom. Denna sida är medvetet 'spartansk' då jag drivs mer av problemlösningen bakom webbutveckling snarare än den ytliga designen av resultatet(även om jag givetvis inte har några problem att arbeta med den). Arbetet med sidan är ständigt pågående, då jag försöker hålla projekten uppdaterade såväl som att 'tweaka' på koden.",
             "detaljtext": {
-                "behov": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
-                "utmaningar": "*** Jag har ännu inte skrivit någon text om detta projekt, men du får väldigt gärna höra av dig med frågor / funderingar ***",
+                "behov": false,
+                "utmaningar": false,
                 "special": ""
             },
             "live": "",
@@ -299,7 +327,8 @@
         "databas": "fas fa-database",
         "Python": "fab fa-python",
         "GIT": "fab fa-git-alt",
-        "Bootstrap4": "fab fa-bootstrap"
+        "Bootstrap4": "fab fa-bootstrap",
+        "VisualBasic": "fab fa-windows"
 
     }
 }

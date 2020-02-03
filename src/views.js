@@ -116,7 +116,7 @@ async function laddaProjekt() {
 
 
 
-            const a = live !== "" ? skapaA(live) : skapaA("#")
+            const a = live !== "" ? skapaA(live) : skapaA(github)
             a.className = "live"
             const lankBild = skapaImg(filnamn, header)
             lankBild.className = "screenshot"
@@ -153,14 +153,25 @@ async function laddaProjekt() {
                 class: "projektLankar"
             })
 
-            const merinfo = skapaA("#", "bakgrund")
-            merinfo.className = "merinfo"
-            merinfo.dataset.projekt = filnamn
+            // FLYTTA TODO:
+
+
+
+            // FLYTTA TODO:
+
+            if (finnsYtterligareInfo(detaljtext)) {
+                const merinfo = skapaA("#", "mer")
+                merinfo.className = "merinfo"
+                merinfo.dataset.projekt = filnamn
+                projektLankar.append(merinfo)
+            }
+
+
             const githubLank = skapaA(github, "github")
             githubLank.className = "github"
             const liveLank = live ? skapaA(live, "live") : ""
 
-            projektLankar.append(merinfo, githubLank, liveLank)
+            projektLankar.append(githubLank, liveLank)
 
             divProjektInformation.append(p, projektLankar)
 

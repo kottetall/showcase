@@ -29,8 +29,11 @@ window.addEventListener("DOMContentLoaded", async () => {
     document.querySelector(".sortering .fa-undo-alt").addEventListener("click", () => {
         const allaProjekt = document.querySelectorAll(".projekt article")
 
+        // console.log()
+
         for (const projekt of allaProjekt) {
-            projekt.style.display = "block"
+            projekt.classList.remove("sortHide")
+            projekt.classList.add("sortShow")
         }
     }, {
         passive: "true"
@@ -46,7 +49,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     // för stora bilder vid hover
     document.querySelectorAll(".screenshot").forEach((shot) => {
         shot.addEventListener("mouseenter", (e) => {
-            showLarge(e)
+            // TODO: funktionen behöver göras om så att den inte skapar nya instanser i trädet utan enbart förändrar målets storlek
+            // showLarge(e)
         })
     })
 

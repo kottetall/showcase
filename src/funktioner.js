@@ -36,9 +36,12 @@ function sorteraProjekt(e) {
             // ändra från titel till data-verktyg
             const visa = projekt.querySelector("[title~=" + sortering + "]")
             if (visa) {
-                projekt.style.display = "block"
+                projekt.classList.add("sortShow")
+                projekt.classList.remove("sortHide")
+
             } else {
-                projekt.style.display = "none"
+                projekt.classList.add("sortHide")
+                projekt.classList.remove("sortShow")
             }
         }
     }

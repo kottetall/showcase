@@ -71,7 +71,7 @@
                 "Bootstrap4": false
             },
             "header": "Tick tack toe",
-            "sammanfattning": "Efter att jag fick möjligheten att genomföra denna uppgift på ett kodtest hos ett företag, ville jag göra en 'riktig' variant och detta är resultatet. Även om det står att den är under uppbyggnad så är den klar, dock är den i behov av att snyggas till samt få lite ytterligare funktioner tillagda.",
+            "sammanfattning": "Efter att jag fick möjligheten att genomföra denna uppgift på ett kodtest hos ett företag, ville jag göra en 'riktig' variant och detta är resultatet. Även om det står att den är till största delen är färdig så finns det behov av att snygga till lägga till ytterligare funktioner.",
             "detaljtext": {
                 "behov": false,
                 "utmaningar": false,
@@ -264,7 +264,7 @@
         },
         "taikes": {
             "filnamn": "taikes",
-            "inprogress": true,
+            "inprogress": false,
             "verktyg": {
                 "HTML5": true,
                 "CSS3": true,

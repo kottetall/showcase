@@ -277,6 +277,16 @@ footer .kontakt:hover {
       flex-wrap: nowrap;
 }
 
+.sortShow {
+  -webkit-animation: fadeIn 300ms ease-out forwards;
+          animation: fadeIn 300ms ease-out forwards;
+}
+
+.sortHide {
+  -webkit-animation: fadeOut 400ms ease-out forwards;
+          animation: fadeOut 400ms ease-out forwards;
+}
+
 .workInProgress {
   display: block;
   font-weight: 500;
@@ -294,6 +304,8 @@ footer .kontakt:hover {
 .screenshot {
   width: 100%;
   min-width: 300px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
 }
 
 .screenshot:hover {
@@ -457,6 +469,106 @@ footer .kontakt:hover {
 @media only screen and (max-width: 600px) {
   .largeImg {
     display: none;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+    height: 1px;
+  }
+  30% {
+    opacity: 0;
+  }
+  90% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    height: 300px;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+    display: block;
+    height: auto;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+    height: 1px;
+  }
+  30% {
+    opacity: 0;
+  }
+  90% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    height: 300px;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+    display: block;
+    height: auto;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+  20% {
+    height: 300px;
+  }
+  30% {
+    opacity: 0;
+  }
+  70% {
+    height: 1px;
+  }
+  90% {
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+    height: 0px;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+  20% {
+    height: 300px;
+  }
+  30% {
+    opacity: 0;
+  }
+  70% {
+    height: 1px;
+  }
+  90% {
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+    height: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -279,22 +279,22 @@ async function laddaProjekt() {
     }
 }
 
-function showLarge(elm) {
-    const div = skapa("div", {
-        class: "largeImg"
-    })
+// function showLarge(elm) {
+//     const div = skapa("div", {
+//         class: "largeImg"
+//     })
 
-    div.style.backgroundImage = `url(../img/${elm.target.dataset.full})`
+//     div.style.backgroundImage = `url(../img/${elm.target.dataset.full})`
 
-    const lank = elm.target.parentElement
+//     const lank = elm.target.parentElement
 
-    div.addEventListener("mouseleave", (e) => {
-        div.className = ""
-    })
-    div.addEventListener("click", () => {
-        lank.click()
-    })
+//     div.addEventListener("mouseleave", (e) => {
+//         div.className = ""
+//     })
+//     div.addEventListener("click", () => {
+//         lank.click()
+//     })
 
-    const main = elm.target.parentElement.parentElement.parentElement
-    main.append(div)
-}
+//     const main = elm.target.parentElement.parentElement.parentElement
+//     main.append(div)
+// }

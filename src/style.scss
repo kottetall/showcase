@@ -282,6 +282,14 @@ footer {
     flex-wrap: nowrap;
 }
 
+.sortShow {
+    animation: fadeIn 300ms ease-out forwards;
+}
+
+.sortHide {
+    animation: fadeOut 400ms ease-out forwards;
+}
+
 .workInProgress {
     display: block;
     font-weight: 500;
@@ -299,6 +307,7 @@ footer {
 .screenshot {
     width: 100%;
     min-width: 300px;
+    transition: all 2s ease;
 
     &:hover {
         cursor: pointer;
@@ -311,6 +320,7 @@ footer {
     width: 100%;
     background-size: cover;
     background-position: center top;
+
 }
 
 .largeImg:hover {
@@ -429,10 +439,6 @@ footer {
     }
 }
 
-// .merinfo {
-//     // display: none;
-// }
-
 .kontakt {
     background: rgba(73, 73, 73, 0.9);
     width: auto;
@@ -454,9 +460,67 @@ footer {
     }
 }
 
+// MEDIA QUERYS
 
 @media only screen and (max-width: 600px) {
     .largeImg {
         display: none;
+    }
+}
+
+
+// KEYFRAMES
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+        height: 1px;
+    }
+
+    30% {
+        opacity: 0;
+
+    }
+
+    90% {
+        transform: translateX(0);
+        height: 300px;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 1;
+        display: block;
+        height: auto;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    20% {
+        height: 300px;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    70% {
+        height: 1px;
+    }
+
+    90% {
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-300px);
+        height: 0px;
     }
 }

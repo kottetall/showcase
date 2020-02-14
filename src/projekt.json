@@ -15,7 +15,8 @@
                 "Python": false,
                 "GIT": false,
                 "Bootstrap4": false,
-                "VisualBasic": false
+                "VisualBasic": false,
+                "Spel": false
             },
             "header": "Exempelprojekt",
             "sammanfattning": "Exempel",
@@ -26,6 +27,34 @@
             },
             "live": "",
             "github": "placeholder.com"
+        },
+        "alphabet": {
+            "filnamn": "alphabet",
+            "inprogress": false,
+            "verktyg": {
+                "HTML5": true,
+                "CSS3": true,
+                "JavaScript": true,
+                "Node": false,
+                "npm": false,
+                "Jest": false,
+                "Scss": false,
+                "databas": false,
+                "Python": false,
+                "GIT": true,
+                "Bootstrap4": false,
+                "VisualBasic": false,
+                "Spel": true
+            },
+            "header": "Alphabet",
+            "sammanfattning": "Ett 'snabbspel' jag gjort för mina barn att kunna leka med. Spelet går ut på att du ska välja nästa bokstav/siffra i alfabetet/ordningen. Det finns olika alfabet att välja samt siffror och om du vill välja baklänges.",
+            "detaljtext": {
+                "behov": "",
+                "utmaningar": "",
+                "special": ""
+            },
+            "live": "https://kottetall.github.io/alphabet/",
+            "github": "https://github.com/kottetall/alphabet?files=1"
         },
         "tickTackToeVB": {
             "filnamn": "tickTackToeVB",
@@ -42,7 +71,8 @@
                 "Python": false,
                 "GIT": true,
                 "Bootstrap4": false,
-                "VisualBasic": true
+                "VisualBasic": true,
+                "Spel": true
             },
             "header": "Tick tack toe (Visual Basic .NET)",
             "sammanfattning": "För att se hur mina rostiga kunskaper inom VBA skulle översättas till Visual Basic gjorde jag en 'tre i rad'-app. Fokus låg inte på det estetiska, utan enbart på att få en funktionell app.",
@@ -68,7 +98,8 @@
                 "databas": false,
                 "Python": false,
                 "GIT": true,
-                "Bootstrap4": false
+                "Bootstrap4": false,
+                "Spel": true
             },
             "header": "Tick tack toe",
             "sammanfattning": "Efter att jag fick möjligheten att genomföra denna uppgift på ett kodtest hos ett företag, ville jag göra en 'riktig' variant och detta är resultatet. Även om det står att den är till största delen är färdig så finns det behov av att snygga till lägga till ytterligare funktioner.",
@@ -94,7 +125,8 @@
                 "databas": false,
                 "Python": false,
                 "GIT": true,
-                "Bootstrap4": false
+                "Bootstrap4": false,
+                "Spel": true
             },
             "header": "Fizzbuzz - The game",
             "sammanfattning": "Min snabbversion av klassikern Fizzbuzz där jag försökt lägga till några småutmaningar för att göra det lite unikt. Spelet är fortfarande under uppbyggnad då det finns funktioner - nedräkning av tid - som jag inte fått till samt kosmetiska saker.",
@@ -328,7 +360,7 @@
         "Python": "fab fa-python",
         "GIT": "fab fa-git-alt",
         "Bootstrap4": "fab fa-bootstrap",
-        "VisualBasic": "fab fa-windows"
-
+        "VisualBasic": "fab fa-windows",
+        "Spel": "fas fa-gamepad"
     }
 }
